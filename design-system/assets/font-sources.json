@@ -1,0 +1,16 @@
+[
+  {
+    "family": "cormorant-garamond",
+    "source": "https://raw.githubusercontent.com/google/fonts/main/ofl/cormorantgaramond/CormorantGaramond%5Bwght%5D.ttf",
+    "download": "https://fonts.gstatic.com/s/cormorantgaramond/v21/co3bmX5slCNuHLi8bLeY9MK7whWMhyjYqXtK.woff2",
+    "license": "SIL Open Font License 1.1",
+    "use": "self-hosted Latin variable WOFF2; additional subsets needed for future languages"
+  },
+  {
+    "family": "manrope",
+    "source": "https://raw.githubusercontent.com/google/fonts/main/ofl/manrope/Manrope%5Bwght%5D.ttf",
+    "download": "https://fonts.gstatic.com/s/manrope/v20/xn7gYHE41ni1AdIRggexSg.woff2",
+    "license": "SIL Open Font License 1.1",
+    "use": "self-hosted Latin variable WOFF2; additional subsets needed for future languages"
+  }
+]

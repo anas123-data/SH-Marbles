@@ -1,0 +1,22 @@
+{
+  "scores": {
+    "performance": 78,
+    "accessibility": 100,
+    "best-practices": 100,
+    "seo": 66,
+    "agentic-browsing": 100
+  },
+  "metrics": {
+    "first-contentful-paint": "1.2 s",
+    "largest-contentful-paint": "4.3 s",
+    "total-blocking-time": "320 ms",
+    "cumulative-layout-shift": "0",
+    "speed-index": "2.2 s"
+  },
+  "labelAudit": 0,
+  "lcpDiscovery": 1,
+  "notes": [
+    "Local mobile simulation; not field measurements",
+    "SEO intentionally restricted by noindex and robots.txt"
+  ]
+}

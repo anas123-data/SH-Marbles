@@ -1,0 +1,11 @@
+node_modules/
+.next/
+out/
+.env*
+!.env.example
+*.log
+__pycache__/
+*.tsbuildinfo
+output/
+.tools/
+.pnpm-store/
