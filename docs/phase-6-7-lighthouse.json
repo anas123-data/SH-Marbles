@@ -1,0 +1,20 @@
+{
+  "url": "http://127.0.0.1:3000/stone-library",
+  "scores": {
+    "performance": 79,
+    "accessibility": 100,
+    "best-practices": 100,
+    "seo": 66
+  },
+  "metrics": {
+    "first-contentful-paint": "1.6 s",
+    "largest-contentful-paint": "1.8 s",
+    "total-blocking-time": "890 ms",
+    "cumulative-layout-shift": "0",
+    "speed-index": "1.7 s"
+  },
+  "notes": [
+    "Local mobile simulation in Microsoft Edge, not field measurements.",
+    "SEO restricted by preview noindex and robots policy."
+  ]
+}

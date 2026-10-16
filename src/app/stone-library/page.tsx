@@ -1,0 +1,13 @@
+import type { Metadata } from 'next';
+import { catalogueMetadata } from '@/content/metadata';
+import { catalogue } from '@/content/catalogue';
+import { Breadcrumbs, SurfaceImage } from '@/components/catalogue-ui';
+import { StoneBrowser } from '@/components/stone-browser';
+import { ProjectInvitation } from '@/components/site-footer';
+
+export const metadata: Metadata = catalogueMetadata({ title: 'The Stone Library', description: 'Explore stone colour and vein studies, compare material directions and bring a considered palette to your marble furniture or basin project.' });
+
+export default async function StoneLibraryPage() {
+  const materials = await catalogue.listMaterials();
+  return <main id="main"><div className="shell"><Breadcrumbs items={[{ label: 'Stone Library' }]} /></div><section className="stone-library-hero"><div className="library-hero-copy"><p className="eyebrow">The Stone Library</p><h1>Nature,<br /><em>in detail.</em></h1><p>Begin with a colour. Follow a vein.<br />Find the character your space is calling for.</p><a className="text-link" href="#stone-studies">Explore the studies <span aria-hidden="true">↓</span></a></div><div className="library-hero-image"><SurfaceImage material={materials[2]} priority sizes="(max-width: 767px) 100vw, 52vw" /><div className="library-hero-caption"><p className="eyebrow">In focus / Burgundy</p><p>A rhythm of pale lines<br />against a deeper ground.</p></div></div></section><section className="library-intro shell"><p className="eyebrow">A material vocabulary</p><h2>The first choice<br />is a <em>feeling.</em></h2><p>Explore colour and pattern through details from the supplied pieces. These visual studies help you describe a direction; actual stone names, origins, finishes and availability will be confirmed by the studio.</p></section><section id="stone-studies" className="library-section shell" aria-label="Browse stone studies"><StoneBrowser materials={materials} /></section><section className="library-guidance shell section-space"><div><p className="eyebrow">From an image to your piece</p><h2>Look closer.<br />Then choose.</h2></div><ol><li><span>01</span><div><h3>Find your direction.</h3><p>Consider the tone, contrast and rhythm that sit comfortably with your space.</p></div></li><li><span>02</span><div><h3>Ask for an actual sample.</h3><p>A screen cannot confirm colour, texture or finish. Request sample options in your brief.</p></div></li><li><span>03</span><div><h3>Confirm the particulars.</h3><p>Stone identity, intended use, finish, dimensions and available material belong in the final specification.</p></div></li></ol></section><ProjectInvitation /></main>;
+}

@@ -1,8 +1,8 @@
 export const navigation = [
-  { label: 'Collections', href: '#collections' },
-  { label: 'The material', href: '#material' },
-  { label: 'Bespoke', href: '#bespoke' },
-  { label: 'Our perspective', href: '#perspective' },
+  { label: 'Collections', href: '/collections' },
+  { label: 'Stone Library', href: '/stone-library' },
+  { label: 'Bespoke', href: '/bespoke' },
+  { label: 'Our perspective', href: '/#perspective' },
 ];
 
 // Editorial studies from supplied images, not verified catalogue SKUs.

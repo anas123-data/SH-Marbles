@@ -3,7 +3,7 @@
 import Image from 'next/image';
 import { useRef, useState, type KeyboardEvent } from 'react';
 import { collections, studies, type CollectionId } from '@/content/home';
-import { Arrow } from './ui';
+import { Arrow, TextLink } from './ui';
 import { ProjectButton } from './project-dialog';
 
 const interests: Record<CollectionId, string> = { tables: 'A marble table', basins: 'A marble basin', objects: 'A stone object' };
@@ -33,7 +33,7 @@ export function CollectionExplorer() {
       <div className="study-heading"><p className="eyebrow">A closer look</p><div className="study-tabs" role="tablist" aria-label="Explore a collection">{collections.map((item, index) => <button key={item.id} ref={node => { tabs.current[index] = node; }} type="button" role="tab" id={`tab-${item.id}`} aria-selected={selected === item.id} aria-controls={`panel-${item.id}`} tabIndex={selected === item.id ? 0 : -1} onKeyDown={event => tabKey(event, index)} onClick={() => choose(item.id)}>{item.title}</button>)}</div></div>
       {collections.map(item => <div key={item.id} role="tabpanel" id={`panel-${item.id}`} aria-labelledby={`tab-${item.id}`} hidden={selected !== item.id} tabIndex={0}>{selected === item.id ? <div className="study-grid">
         <div className="study-picture"><Image src={detail ? study.detail : study.image} alt={detail ? `Additional supplied view of ${study.form.toLowerCase()}` : study.alt} fill sizes="(max-width: 767px) 90vw, 48vw" quality={85} /><button type="button" className="image-switch" aria-pressed={detail} onClick={() => setDetail(!detail)}>{detail ? 'Main view' : 'Another perspective'}<span aria-hidden="true">↗</span></button></div>
-        <div className="study-copy"><span className="eyebrow">Form / Material / Presence</span><h3>{study.title}</h3><p className="muted">{study.text}</p><dl><div><dt>Form</dt><dd>{study.form}</dd></div><div><dt>Character</dt><dd>{study.character}</dd></div><div><dt>Made personal</dt><dd>Bring your size, stone and finish preferences.</dd></div></dl><ProjectButton interest={interests[selected]} className="text-link">Plan a piece like this</ProjectButton><p className="fine-print">A visual study from supplied imagery. Stone identity, dimensions and available options require confirmation.</p></div>
+        <div className="study-copy"><span className="eyebrow">Form / Material / Presence</span><h3>{study.title}</h3><p className="muted">{study.text}</p><dl><div><dt>Form</dt><dd>{study.form}</dd></div><div><dt>Character</dt><dd>{study.character}</dd></div><div><dt>Made personal</dt><dd>Bring your size, stone and finish preferences.</dd></div></dl><div className="study-route"><TextLink href={`/collections/${selected}`}>Explore the collection</TextLink></div><ProjectButton interest={interests[selected]} className="text-link">Plan a piece like this</ProjectButton><p className="fine-print">A visual study from supplied imagery. Stone identity, dimensions and available options require confirmation.</p></div>
       </div> : null}</div>)}
     </div>
   </>;

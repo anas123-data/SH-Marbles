@@ -1,0 +1,228 @@
+{
+  "responsive": [
+    {
+      "route": "/bespoke",
+      "width": 375,
+      "overflow": false,
+      "imagesLoaded": true
+    },
+    {
+      "route": "/bespoke",
+      "width": 390,
+      "overflow": false,
+      "imagesLoaded": true
+    },
+    {
+      "route": "/bespoke",
+      "width": 430,
+      "overflow": false,
+      "imagesLoaded": true
+    },
+    {
+      "route": "/bespoke",
+      "width": 768,
+      "overflow": false,
+      "imagesLoaded": true
+    },
+    {
+      "route": "/bespoke",
+      "width": 1024,
+      "overflow": false,
+      "imagesLoaded": true
+    },
+    {
+      "route": "/bespoke",
+      "width": 1440,
+      "overflow": false,
+      "imagesLoaded": true
+    },
+    {
+      "route": "/bespoke",
+      "width": 1920,
+      "overflow": false,
+      "imagesLoaded": true
+    },
+    {
+      "route": "/bespoke/configure",
+      "width": 375,
+      "overflow": false,
+      "imagesLoaded": true
+    },
+    {
+      "route": "/bespoke/configure",
+      "width": 390,
+      "overflow": false,
+      "imagesLoaded": true
+    },
+    {
+      "route": "/bespoke/configure",
+      "width": 430,
+      "overflow": false,
+      "imagesLoaded": true
+    },
+    {
+      "route": "/bespoke/configure",
+      "width": 768,
+      "overflow": false,
+      "imagesLoaded": true
+    },
+    {
+      "route": "/bespoke/configure",
+      "width": 1024,
+      "overflow": false,
+      "imagesLoaded": true
+    },
+    {
+      "route": "/bespoke/configure",
+      "width": 1440,
+      "overflow": false,
+      "imagesLoaded": true
+    },
+    {
+      "route": "/bespoke/configure",
+      "width": 1920,
+      "overflow": false,
+      "imagesLoaded": true
+    },
+    {
+      "route": "/bespoke/inquiry",
+      "width": 375,
+      "overflow": false,
+      "imagesLoaded": true
+    },
+    {
+      "route": "/bespoke/inquiry",
+      "width": 390,
+      "overflow": false,
+      "imagesLoaded": true
+    },
+    {
+      "route": "/bespoke/inquiry",
+      "width": 430,
+      "overflow": false,
+      "imagesLoaded": true
+    },
+    {
+      "route": "/bespoke/inquiry",
+      "width": 768,
+      "overflow": false,
+      "imagesLoaded": true
+    },
+    {
+      "route": "/bespoke/inquiry",
+      "width": 1024,
+      "overflow": false,
+      "imagesLoaded": true
+    },
+    {
+      "route": "/bespoke/inquiry",
+      "width": 1440,
+      "overflow": false,
+      "imagesLoaded": true
+    },
+    {
+      "route": "/bespoke/inquiry",
+      "width": 1920,
+      "overflow": false,
+      "imagesLoaded": true
+    }
+  ],
+  "accessibility": [
+    {
+      "state": "/bespoke / 390",
+      "violations": []
+    },
+    {
+      "state": "/bespoke / 1440",
+      "violations": []
+    },
+    {
+      "state": "/bespoke/configure / 390",
+      "violations": []
+    },
+    {
+      "state": "/bespoke/configure / 1440",
+      "violations": []
+    },
+    {
+      "state": "/bespoke/inquiry / 390",
+      "violations": []
+    },
+    {
+      "state": "/bespoke/inquiry / 1440",
+      "violations": []
+    },
+    {
+      "state": "selected material / mobile",
+      "violations": []
+    },
+    {
+      "state": "configured round table / mobile",
+      "violations": []
+    },
+    {
+      "state": "inquiry validation errors / mobile",
+      "violations": []
+    },
+    {
+      "state": "contact form / mobile",
+      "violations": []
+    },
+    {
+      "state": "review / mobile",
+      "violations": []
+    }
+  ],
+  "interactions": [
+    "shape/edge compatibility; round dimension validation; material handoff; inquiry validation; signature rejection; file retention; review; copy/download; no network submission; privacy-safe events; edit retention; confirmed reset",
+    "product reference handoff; refresh clears personal data; mobile menu bespoke navigation"
+  ],
+  "api": [
+    {
+      "label": "valid draft fails closed",
+      "status": 503,
+      "code": "INQUIRY_UNAVAILABLE"
+    },
+    {
+      "label": "malformed JSON",
+      "status": 400,
+      "code": "INVALID_BODY"
+    },
+    {
+      "label": "invalid contact",
+      "status": 422,
+      "code": "VALIDATION_FAILED"
+    },
+    {
+      "label": "honeypot",
+      "status": 422,
+      "code": "VALIDATION_FAILED"
+    },
+    {
+      "label": "cross-origin",
+      "status": 403,
+      "code": "ORIGIN_REJECTED"
+    },
+    {
+      "label": "wrong content type",
+      "status": 415,
+      "code": "FORMAT_REJECTED"
+    },
+    {
+      "label": "oversized body",
+      "status": 413,
+      "code": "BODY_TOO_LARGE"
+    },
+    {
+      "label": "unsupported uploads",
+      "status": 422,
+      "code": "UNSUPPORTED_FIELDS"
+    },
+    {
+      "label": "invalid configuration",
+      "status": 422,
+      "code": "CONFIGURATION_INVALID"
+    }
+  ],
+  "errors": []
+}

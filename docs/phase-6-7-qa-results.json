@@ -1,0 +1,387 @@
+{
+  "responsive": [
+    {
+      "route": "/collections",
+      "width": 375,
+      "documentWidth": 375,
+      "imagesLoaded": true
+    },
+    {
+      "route": "/collections",
+      "width": 390,
+      "documentWidth": 390,
+      "imagesLoaded": true
+    },
+    {
+      "route": "/collections",
+      "width": 430,
+      "documentWidth": 430,
+      "imagesLoaded": true
+    },
+    {
+      "route": "/collections",
+      "width": 768,
+      "documentWidth": 768,
+      "imagesLoaded": true
+    },
+    {
+      "route": "/collections",
+      "width": 1024,
+      "documentWidth": 1024,
+      "imagesLoaded": true
+    },
+    {
+      "route": "/collections",
+      "width": 1440,
+      "documentWidth": 1440,
+      "imagesLoaded": true
+    },
+    {
+      "route": "/collections",
+      "width": 1920,
+      "documentWidth": 1920,
+      "imagesLoaded": true
+    },
+    {
+      "route": "/collections/basins",
+      "width": 375,
+      "documentWidth": 375,
+      "imagesLoaded": true
+    },
+    {
+      "route": "/collections/basins",
+      "width": 390,
+      "documentWidth": 390,
+      "imagesLoaded": true
+    },
+    {
+      "route": "/collections/basins",
+      "width": 430,
+      "documentWidth": 430,
+      "imagesLoaded": true
+    },
+    {
+      "route": "/collections/basins",
+      "width": 768,
+      "documentWidth": 768,
+      "imagesLoaded": true
+    },
+    {
+      "route": "/collections/basins",
+      "width": 1024,
+      "documentWidth": 1024,
+      "imagesLoaded": true
+    },
+    {
+      "route": "/collections/basins",
+      "width": 1440,
+      "documentWidth": 1440,
+      "imagesLoaded": true
+    },
+    {
+      "route": "/collections/basins",
+      "width": 1920,
+      "documentWidth": 1920,
+      "imagesLoaded": true
+    },
+    {
+      "route": "/products/fluted-rectangular-basin",
+      "width": 375,
+      "documentWidth": 375,
+      "imagesLoaded": true
+    },
+    {
+      "route": "/products/fluted-rectangular-basin",
+      "width": 390,
+      "documentWidth": 390,
+      "imagesLoaded": true
+    },
+    {
+      "route": "/products/fluted-rectangular-basin",
+      "width": 430,
+      "documentWidth": 430,
+      "imagesLoaded": true
+    },
+    {
+      "route": "/products/fluted-rectangular-basin",
+      "width": 768,
+      "documentWidth": 768,
+      "imagesLoaded": true
+    },
+    {
+      "route": "/products/fluted-rectangular-basin",
+      "width": 1024,
+      "documentWidth": 1024,
+      "imagesLoaded": true
+    },
+    {
+      "route": "/products/fluted-rectangular-basin",
+      "width": 1440,
+      "documentWidth": 1440,
+      "imagesLoaded": true
+    },
+    {
+      "route": "/products/fluted-rectangular-basin",
+      "width": 1920,
+      "documentWidth": 1920,
+      "imagesLoaded": true
+    },
+    {
+      "route": "/stone-library",
+      "width": 375,
+      "documentWidth": 375,
+      "imagesLoaded": true
+    },
+    {
+      "route": "/stone-library",
+      "width": 390,
+      "documentWidth": 390,
+      "imagesLoaded": true
+    },
+    {
+      "route": "/stone-library",
+      "width": 430,
+      "documentWidth": 430,
+      "imagesLoaded": true
+    },
+    {
+      "route": "/stone-library",
+      "width": 768,
+      "documentWidth": 768,
+      "imagesLoaded": true
+    },
+    {
+      "route": "/stone-library",
+      "width": 1024,
+      "documentWidth": 1024,
+      "imagesLoaded": true
+    },
+    {
+      "route": "/stone-library",
+      "width": 1440,
+      "documentWidth": 1440,
+      "imagesLoaded": true
+    },
+    {
+      "route": "/stone-library",
+      "width": 1920,
+      "documentWidth": 1920,
+      "imagesLoaded": true
+    },
+    {
+      "route": "/stone-library/burgundy",
+      "width": 375,
+      "documentWidth": 375,
+      "imagesLoaded": true
+    },
+    {
+      "route": "/stone-library/burgundy",
+      "width": 390,
+      "documentWidth": 390,
+      "imagesLoaded": true
+    },
+    {
+      "route": "/stone-library/burgundy",
+      "width": 430,
+      "documentWidth": 430,
+      "imagesLoaded": true
+    },
+    {
+      "route": "/stone-library/burgundy",
+      "width": 768,
+      "documentWidth": 768,
+      "imagesLoaded": true
+    },
+    {
+      "route": "/stone-library/burgundy",
+      "width": 1024,
+      "documentWidth": 1024,
+      "imagesLoaded": true
+    },
+    {
+      "route": "/stone-library/burgundy",
+      "width": 1440,
+      "documentWidth": 1440,
+      "imagesLoaded": true
+    },
+    {
+      "route": "/stone-library/burgundy",
+      "width": 1920,
+      "documentWidth": 1920,
+      "imagesLoaded": true
+    }
+  ],
+  "routes": [
+    {
+      "route": "/",
+      "status": 200,
+      "title": "SH MARBLES — Stone, given purpose."
+    },
+    {
+      "route": "/collections",
+      "status": 200,
+      "title": "The Collections — SH MARBLES"
+    },
+    {
+      "route": "/collections/basins",
+      "status": 200,
+      "title": "Marble Sinks &amp; Basins — SH MARBLES"
+    },
+    {
+      "route": "/products/fluted-rectangular-basin",
+      "status": 200,
+      "title": "Fluted rectangular basin — SH MARBLES"
+    },
+    {
+      "route": "/stone-library",
+      "status": 200,
+      "title": "The Stone Library — SH MARBLES"
+    },
+    {
+      "route": "/stone-library/burgundy",
+      "status": 200,
+      "title": "Burgundy — Stone Study — SH MARBLES"
+    },
+    {
+      "route": "/stone-library/ink-and-ivory",
+      "status": 200,
+      "title": "Ink &amp; ivory — Stone Study — SH MARBLES"
+    },
+    {
+      "route": "/stone-library/warm-ivory",
+      "status": 200,
+      "title": "Warm ivory — Stone Study — SH MARBLES"
+    },
+    {
+      "route": "/stone-library/rose",
+      "status": 200,
+      "title": "Rose — Stone Study — SH MARBLES"
+    },
+    {
+      "route": "/stone-library/amber",
+      "status": 200,
+      "title": "Amber — Stone Study — SH MARBLES"
+    },
+    {
+      "route": "/stone-library/forest",
+      "status": 200,
+      "title": "Forest — Stone Study — SH MARBLES"
+    },
+    {
+      "route": "/collections/tables",
+      "status": 200,
+      "title": "Marble Tables — SH MARBLES"
+    },
+    {
+      "route": "/collections/objects",
+      "status": 200,
+      "title": "Decorative Stone Objects — SH MARBLES"
+    },
+    {
+      "route": "/products/cross-base-side-table",
+      "status": 200,
+      "title": "Cross-base side table — SH MARBLES"
+    },
+    {
+      "route": "/products/fluted-round-basin",
+      "status": 200,
+      "title": "Fluted round basin — SH MARBLES"
+    },
+    {
+      "route": "/products/rounded-vessel-basin",
+      "status": 200,
+      "title": "Rounded vessel basin — SH MARBLES"
+    },
+    {
+      "route": "/products/rose-toned-vessel",
+      "status": 200,
+      "title": "Rose-toned vessel — SH MARBLES"
+    },
+    {
+      "route": "/products/amber-toned-vessel",
+      "status": 200,
+      "title": "Amber-toned vessel — SH MARBLES"
+    },
+    {
+      "route": "/products/carved-green-basin",
+      "status": 200,
+      "title": "Carved green basin — SH MARBLES"
+    },
+    {
+      "route": "/products/stone-game-set",
+      "status": 200,
+      "title": "Stone game set — SH MARBLES"
+    }
+  ],
+  "interactions": [
+    "All linked routes return 200 with unique metadata; unknown categories/products/materials return 404",
+    "Product category/search combinations, empty state and reset; keyboard skip link",
+    "Gallery selection, full-image next/close, keyboard focus/body-scroll restoration, product price/customization contexts and copied brief, specification accordion",
+    "Stone search, combined filters, empty/reset, three-item limit, removal, comparison on desktop/mobile, material download handoff, no stale product context, clear selection",
+    "Material sample context; mobile cross-page navigation closes menu and restores scroll; reduced motion",
+    "Primary collection and material content rendered without JavaScript"
+  ],
+  "accessibility": [
+    {
+      "state": "/collections / 390",
+      "violations": []
+    },
+    {
+      "state": "/collections / 1440",
+      "violations": []
+    },
+    {
+      "state": "/collections/basins / 390",
+      "violations": []
+    },
+    {
+      "state": "/collections/basins / 1440",
+      "violations": []
+    },
+    {
+      "state": "/products/fluted-rectangular-basin / 390",
+      "violations": []
+    },
+    {
+      "state": "/products/fluted-rectangular-basin / 1440",
+      "violations": []
+    },
+    {
+      "state": "/stone-library / 390",
+      "violations": []
+    },
+    {
+      "state": "/stone-library / 1440",
+      "violations": []
+    },
+    {
+      "state": "/stone-library/burgundy / 390",
+      "violations": []
+    },
+    {
+      "state": "/stone-library/burgundy / 1440",
+      "violations": []
+    },
+    {
+      "state": "Full image dialog",
+      "violations": []
+    },
+    {
+      "state": "Product project brief",
+      "violations": []
+    },
+    {
+      "state": "Three-stone comparison desktop",
+      "violations": []
+    },
+    {
+      "state": "Three-stone comparison mobile",
+      "violations": []
+    },
+    {
+      "state": "Mobile navigation",
+      "violations": []
+    }
+  ],
+  "errors": []
+}

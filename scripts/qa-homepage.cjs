@@ -91,7 +91,8 @@ async function main() {
     await page.getByRole('button',{name:'Menu',exact:true}).click();
     await page.getByRole('navigation',{name:'Mobile navigation'}).getByRole('link',{name:/Bespoke/}).click();
     assert.ok(!(await page.locator('#mobile-menu').isVisible()));
-    assert.equal(new URL(page.url()).hash,'#bespoke');
+    await page.waitForURL('**/bespoke');
+    assert.equal(new URL(page.url()).pathname,'/bespoke');
     result.interactions.push('Mobile menu navigation, Escape, focus trap supplied by native dialog, scroll unlock');
     await page.emulateMedia({reducedMotion:'reduce'});
     assert.equal(await page.evaluate(()=>getComputedStyle(document.documentElement).scrollBehavior),'auto');

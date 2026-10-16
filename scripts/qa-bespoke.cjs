@@ -1,0 +1,165 @@
+const { chromium } = require('playwright');
+const { default: AxeBuilder } = require('@axe-core/playwright');
+const assert = require('node:assert/strict');
+const fs = require('node:fs');
+const path = require('node:path');
+async function main() {
+  const base = process.env.QA_BASE_URL || 'http://127.0.0.1:3000';
+  const output = path.resolve('output/playwright/bespoke');
+  fs.mkdirSync(output, { recursive: true });
+  const browser = await chromium.launch({ headless: true, channel: process.env.QA_BROWSER_CHANNEL || 'msedge' });
+  const report = { responsive: [], accessibility: [], interactions: [], api: [], errors: [] };
+  try {
+    const context = await browser.newContext({ permissions: ['clipboard-read','clipboard-write'], acceptDownloads: true, reducedMotion: 'reduce' });
+    const page = await context.newPage();
+    page.on('pageerror', error => report.errors.push(error.message));
+    page.on('console', message => { if (message.type() === 'error') report.errors.push(message.text()); });
+    let inquiryPosts = 0;
+    page.on('request', request => { if (request.url().includes('/api/inquiries') && request.method() === 'POST') inquiryPosts++; });
+    await page.addInitScript(() => { window.bespokeEvents = []; window.addEventListener('sh-marbles:analytics', event => window.bespokeEvents.push(event.detail)); });
+    async function audit(state) {
+      const result = await new AxeBuilder({ page }).withTags(['wcag2a','wcag2aa','wcag21aa','wcag22aa']).analyze();
+      const violations = result.violations.map(item => ({ id: item.id, impact: item.impact, nodes: item.nodes.map(node => ({ target: node.target, summary: node.failureSummary })) }));
+      report.accessibility.push({ state, violations });
+      assert.equal(violations.length, 0, JSON.stringify({ state, violations }));
+    }
+    for (const route of (process.env.QA_INTERACTIONS ? [] : ['/bespoke','/bespoke/configure','/bespoke/inquiry'])) {
+      for (const width of [375,390,430,768,1024,1440,1920]) {
+        await page.setViewportSize({ width, height: 950 });
+        assert.equal((await page.goto(base + route, { waitUntil: 'networkidle' })).status(), 200);
+        await page.evaluate(() => document.fonts.ready);
+        await page.evaluate(async () => { for(let y=0;y<document.body.scrollHeight;y+=700){scrollTo(0,y);await new Promise(resolve=>setTimeout(resolve,30));} });
+        await page.waitForFunction(() => [...document.images].every(image => image.complete && image.naturalWidth > 0));
+        assert.equal(await page.locator('h1').count(),1);
+        assert.ok(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth), `Overflow ${route} ${width}`);
+        report.responsive.push({ route,width,overflow:false,imagesLoaded:true });
+        await page.evaluate(() => scrollTo(0,0));
+        if(width===390 || width===1440){ await page.screenshot({ path:path.join(output,`${route.replaceAll('/','-').slice(1)}-${width}.png`),fullPage:true }); await audit(`${route} / ${width}`); }
+      }
+      console.log(`Responsive passed: ${route}`);
+    }
+    await page.setViewportSize({ width:390,height:900 });
+    await page.goto(base+'/bespoke/configure');
+    await page.getByRole('radio',{name:/Console/}).check();
+    await page.getByRole('button',{name:'03 Proportion'}).click();
+    await page.getByRole('radio',{name:'Waterfall'}).check();
+    await page.getByRole('button',{name:'01 Form'}).click();
+    await page.getByRole('radio',{name:'Oval',exact:true}).check();
+    await page.getByRole('button',{name:'03 Proportion'}).click();
+    assert.equal(await page.getByRole('radio',{name:'Waterfall'}).count(),0);
+    assert.ok(await page.getByRole('radio',{name:'Straight',exact:true}).isChecked());
+    await page.getByRole('button',{name:'01 Form'}).click();
+    await page.getByRole('radio',{name:/Coffee table/}).check();
+    await page.getByRole('radio',{name:'Round',exact:true}).check();
+    await page.getByRole('button',{name:'02 Material'}).click();
+    await page.getByRole('radio',{name:'Burgundy',exact:true}).check();
+    await audit('selected material / mobile');
+    await page.getByRole('button',{name:'03 Proportion'}).click();
+    await page.getByLabel('Diameter mm').fill('0');
+    await page.getByRole('button',{name:'Add to project brief'}).click();
+    assert.match(await page.locator('.builder-controls [role=alert]').innerText(),/check your dimensions/);
+    await page.getByLabel('Diameter mm').fill('900');
+    await page.getByLabel('Height mm').fill('420');
+    await page.getByRole('radio',{name:'Bullnose',exact:true}).check();
+    await audit('configured round table / mobile');
+    await page.screenshot({path:path.join(output,'configured-mobile.png'),fullPage:true});
+    await page.getByRole('button',{name:'Add to project brief'}).click();
+    await page.waitForURL('**/bespoke/inquiry');
+    assert.equal(await page.getByLabel('Product interest').inputValue(),'A marble table');
+    assert.equal(await page.getByLabel('Preferred material').inputValue(),'Burgundy — visual study');
+    assert.match(await page.locator('.inquiry-aside').innerText(),/900 × 420 mm/);
+    await page.getByRole('button',{name:'Continue to contact'}).click();
+    assert.ok(await page.locator('.error-summary').isVisible());
+    assert.ok(await page.locator('.error-summary').evaluate(element=>element===document.activeElement));
+    await audit('inquiry validation errors / mobile');
+    await page.getByLabel('Your idea').fill('A circular coffee table for the lounge, with a soft edge.');
+    await page.getByLabel('Quantity').fill('2');
+    await page.getByLabel('Budget preference').selectOption('1,000–5,000');
+    await page.getByLabel('Budget currency').selectOption('GBP');
+    const png = Buffer.from([137,80,78,71,13,10,26,10,0,0,0,0]);
+    await page.locator('#reference-files').setInputFiles({ name:'reference.png',mimeType:'image/png',buffer:png });
+    await page.getByRole('button',{name:'Remove reference.png',exact:true}).waitFor();
+    await page.locator('#reference-files').setInputFiles({ name:'fake.png',mimeType:'image/png',buffer:Buffer.from('wrong') });
+    await page.waitForFunction(()=>document.querySelector('#reference-feedback').textContent.includes('does not match'));
+    assert.ok(await page.getByRole('button',{name:'Remove reference.png',exact:true}).isVisible());
+    await page.getByRole('button',{name:'Continue to contact'}).click();
+    await page.getByRole('button',{name:'Review my brief'}).click();
+    assert.match(await page.locator('.error-summary').innerText(),/Enter your name/);
+    await page.getByLabel('Name *',{exact:true}).fill('QA Designer');
+    await page.getByLabel('Company').fill('Example Studio');
+    await page.getByLabel('Project country').fill('United Kingdom');
+    await page.getByLabel('Delivery city').fill('London');
+    await page.getByLabel('Email',{exact:false}).fill('designer@example.com');
+    await page.getByRole('checkbox').check();
+    await audit('contact form / mobile');
+    await page.getByRole('button',{name:'Review my brief'}).click();
+    const review = await page.locator('.brief-review').innerText();
+    for(const expected of ['QA Designer','Burgundy','900 × 420 mm','reference.png','not embedded','has not been sent','GBP']) assert.ok(review.includes(expected),expected);
+    await audit('review / mobile');
+    await page.screenshot({path:path.join(output,'review-mobile.png'),fullPage:true});
+    await page.getByRole('button',{name:'Copy brief',exact:true}).click();
+    assert.match(await page.evaluate(()=>navigator.clipboard.readText()),/QA Designer/);
+    const downloadEvent = page.waitForEvent('download');
+    await page.getByRole('button',{name:'Download my brief'}).click();
+    const download = await downloadEvent;
+    assert.equal(download.suggestedFilename(),'SH-MARBLES-bespoke-inquiry.txt');
+    assert.match(fs.readFileSync(await download.path(),'utf8'),/reference.png/);
+    assert.equal(inquiryPosts,0,'Draft form must not post personal data');
+    const events = await page.evaluate(()=>window.bespokeEvents);
+    assert.ok(events.some(event=>event.name==='configurator_completed'));
+    assert.ok(events.some(event=>event.name==='inquiry_started'));
+    assert.equal(events.filter(event=>event.name==='brief_exported').length,2);
+    assert.ok(!JSON.stringify(events).includes('QA Designer'));
+    await page.getByRole('button',{name:'Edit project',exact:true}).click();
+    assert.ok(await page.getByRole('button',{name:'Remove reference.png',exact:true}).isVisible());
+    await page.getByRole('link',{name:'Edit configuration'}).click();
+    await page.getByRole('button',{name:'03 Proportion'}).click();
+    assert.equal(await page.getByLabel('Diameter mm').inputValue(),'900');
+    await page.getByRole('button',{name:'Add to project brief'}).click();
+    assert.match(await page.getByLabel('Your idea').inputValue(),/circular coffee/);
+    await page.getByRole('button',{name:'Clear this draft',exact:true}).click();
+    await page.getByRole('button',{name:'Keep editing'}).click();
+    assert.match(await page.getByLabel('Your idea').inputValue(),/circular coffee/);
+    await page.getByRole('button',{name:'Clear this draft',exact:true}).click();
+    await page.getByRole('button',{name:'Yes, clear draft'}).click();
+    assert.equal(await page.getByLabel('Your idea').inputValue(),'');
+    assert.equal(await page.locator('.reference-list li').count(),0);
+    assert.equal(await page.getByRole('link',{name:'Edit configuration'}).count(),0);
+    report.interactions.push('shape/edge compatibility; round dimension validation; material handoff; inquiry validation; signature rejection; file retention; review; copy/download; no network submission; privacy-safe events; edit retention; confirmed reset');
+    // Existing product dialog must carry the reference into the new flow.
+    await page.goto(base+'/products/fluted-rectangular-basin');
+    await page.getByRole('button',{name:'Request price',exact:true}).click();
+    await page.locator('#brief-details').fill('A basin for the guest bathroom.');
+    await page.getByRole('button',{name:'Continue to detailed brief'}).click();
+    await page.waitForURL('**/bespoke/inquiry');
+    assert.match(await page.locator('.inquiry-aside').innerText(),/Fluted rectangular basin/i);
+    assert.equal(await page.getByLabel('Your idea').inputValue(),'A basin for the guest bathroom.');
+    await page.reload();
+    assert.equal(await page.getByLabel('Your idea').inputValue(),'');
+    await page.keyboard.press('Control+Home'); await page.keyboard.press('Tab');
+    // Mobile menu navigation remains usable after the new provider and route changes.
+    await page.getByRole('button',{name:'Menu',exact:true}).click();
+    await page.getByRole('dialog').getByRole('link',{name:/Bespoke/}).click();
+    await page.waitForURL('**/bespoke');
+    assert.equal(await page.getByRole('dialog').count(),0);
+    report.interactions.push('product reference handoff; refresh clears personal data; mobile menu bespoke navigation');
+    const fields = {name:'API Test',company:'',country:'Pakistan',email:'test@example.com',phone:'',interest:'A bespoke piece',sector:'Not decided',dimensions:'',quantity:'1',material:'',budget:'Not decided',currency:'USD',timeline:'Not decided',destination:'Lahore',message:'A side table for a room.',website:'',consent:true};
+    async function post(label, payload, status, headers={}) {
+      const response=await context.request.post(base+'/api/inquiries',{headers:{Origin:base,'Content-Type':'application/json',...headers},data:typeof payload==='string'?payload:JSON.stringify(payload)});
+      assert.equal(response.status(),status,label);const body=await response.json();assert.equal(body.ok,false);report.api.push({label,status,code:body.code});return body;
+    }
+    const unavailable=await post('valid draft fails closed',{fields},503);assert.match(unavailable.message,/not been received/);
+    await post('malformed JSON','{',400);
+    await post('invalid contact',{fields:{...fields,email:'bad'}},422);
+    await post('honeypot',{fields:{...fields,website:'spam'}},422);
+    await post('cross-origin',{fields},403,{Origin:'https://example.org'});
+    await post('wrong content type',{fields},415,{'Content-Type':'text/plain'});
+    await post('oversized body','x'.repeat(33000),413);
+    await post('unsupported uploads',{fields,files:['anything.pdf']},422);
+    await post('invalid configuration',{fields,configuration:{width:0}},422);
+    assert.equal((await context.request.get(base+'/api/inquiries')).status(),405);
+    assert.equal(report.errors.length,0,JSON.stringify(report.errors));
+    console.log('Phase 8 interactions, accessibility and API boundaries passed.');
+  } finally { fs.writeFileSync(path.join(output,'qa-results.json'),JSON.stringify(report,null,2)); await browser.close(); }
+}
+main().catch(error=>{console.error(error);process.exitCode=1;});
