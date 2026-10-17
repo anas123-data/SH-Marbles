@@ -14,7 +14,10 @@
     "qa:catalogue": "node scripts/qa-catalogue.cjs",
     "qa:lighthouse": "lighthouse http://127.0.0.1:3000 --quiet --chrome-flags=--headless --output=html --output=json --output-path=output/phase-5/lighthouse-mobile",
     "test:bespoke": "node --test --test-isolation=none scripts/bespoke.test.mjs",
-    "qa:bespoke": "node scripts/qa-bespoke.cjs"
+    "qa:bespoke": "node scripts/qa-bespoke.cjs",
+    "qa:studio": "node scripts/qa-studio.cjs",
+    "test:concierge": "node --test --test-isolation=none scripts/concierge.test.mjs",
+    "qa:concierge": "node scripts/qa-concierge.cjs"
   },
   "dependencies": {
     "next": "16.4.0",

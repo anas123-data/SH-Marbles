@@ -4,6 +4,9 @@ import './globals.css';
 import './catalogue.css';
 import './bespoke.css';
 import './cinema.css';
+import './studio.css';
+import './concierge.css';
+import { ConciergeProvider } from '@/features/concierge/provider';
 import { JourneyProvider } from '@/features/bespoke/journey-provider';
 import { ProjectProvider } from '@/components/project-dialog';
 import { Header } from '@/components/header';
@@ -20,5 +23,5 @@ export const metadata: Metadata = {
   twitter: { card: 'summary_large_image', title: 'SH MARBLES — Stone, given purpose.' },
 };
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
-  return <html lang="en" className={`${editorial.variable} ${sans.variable}`}><body><JourneyProvider><ProjectProvider><a href="#main" className="skip-link">Skip to content</a><div id="top"><Header /></div>{children}<Footer /></ProjectProvider></JourneyProvider></body></html>;
+  return <html lang="en" className={`${editorial.variable} ${sans.variable}`}><body><JourneyProvider><ConciergeProvider><ProjectProvider><a href="#main" className="skip-link">Skip to content</a><div id="top"><Header /></div>{children}<Footer /></ProjectProvider></ConciergeProvider></JourneyProvider></body></html>;
 }

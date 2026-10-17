@@ -1,9 +1,9 @@
 # SH MARBLES
 
-An editorial website for a marble furniture and handicraft brand. **Phases 1–8 are implemented locally:** foundation, homepage, collection/product experience, Stone Library and the bespoke journey. Inquiry delivery remains in explicit draft mode. Phase 9 onward remains pending.
+An editorial website for a marble furniture and handicraft brand. **Phases 1–10 are implemented locally:** foundation, homepage, collections, Stone Library, bespoke journey, brand pages and the Stone Concierge in guided catalogue mode. Live AI and inquiry delivery are not connected. Phases 11–12 remain pending.
 
 
-The homepage now uses the owner-selected dark cinematic direction: charcoal surfaces, an image-led hero and revised typography/layouts. This first redesign is scoped to the homepage; the collection, material and bespoke routes retain their previous styling. See `docs/12-dark-cinematic-homepage.md`.
+The homepage now uses the owner-selected dark cinematic direction: charcoal surfaces, an image-led hero and revised typography/layouts. The dark direction now covers the homepage, Phase 9 brand/project pages and the Stone Concierge; collection, material and bespoke routes retain their previous styling. See `docs/12-dark-cinematic-homepage.md`.
 
 ## Run locally
 
@@ -45,7 +45,7 @@ On this Windows workspace, if Node/pnpm are not on PATH, run `./scripts/start-lo
 - Three-step inquiry with configuration/reference handoff, local file checks, contact validation, review, copy/download and confirmed clearing.
 - Fail-closed inquiry API, typed future delivery contracts and privacy-safe local analytics events.
 
-**The project brief does not submit data.** It stays in page memory and can be copied or downloaded by the visitor. No contact details, backend, CRM, analytics provider, database or AI service is configured. Do not represent a downloaded brief as a sent inquiry.
+**The project brief does not submit data.** It stays in page memory and can be copied or downloaded by the visitor. No official contact details, inquiry-delivery service, CRM, analytics provider, database or AI service is configured. Do not represent a downloaded brief as a sent inquiry.
 
 ## Project structure
 
@@ -94,9 +94,10 @@ node scripts/qa-homepage.cjs
 node scripts/qa-catalogue.cjs
 pnpm test:bespoke
 pnpm qa:bespoke
+pnpm qa:studio
 ```
 
-Browser scripts default to installed Microsoft Edge. Set `QA_BROWSER_CHANNEL=chrome` for Chrome. They exercise seven widths (375–1920 px), native menus/dialogs, filters, comparisons, galleries, contextual copied/downloaded briefs, reduced motion, no-JavaScript content and Axe accessibility. The catalogue check additionally walks all linked catalogue routes, checks unique metadata and tests invalid slugs. Reports/screenshots are saved under ignored `output/phase-5/` and `output/playwright/catalogue/`. Browser tools and Lighthouse are development-only dependencies. No dependency was added for Phases 6–8. The bespoke suite covers configuration, validation, exports, local file handling, private-data reset, responsive states and API failures. Its evidence is under `output/playwright/bespoke/`.
+Browser scripts default to installed Microsoft Edge. Set `QA_BROWSER_CHANNEL=chrome` for Chrome. They exercise seven widths (375–1920 px), native menus/dialogs, filters, comparisons, galleries, contextual copied/downloaded briefs, reduced motion, no-JavaScript content and Axe accessibility. The catalogue check additionally walks all linked catalogue routes, checks unique metadata and tests invalid slugs. Reports/screenshots are saved under ignored `output/phase-5/` and `output/playwright/catalogue/`. Browser tools and Lighthouse are development-only dependencies. No dependency was added for Phases 6–9. The bespoke suite covers configuration, validation, exports, local file handling, private-data reset, responsive states and API failures. Its evidence is under `output/playwright/bespoke/`.
 
 ## Deployment and release boundary
 
@@ -106,7 +107,7 @@ Secrets belong only in server environment variables when real integrations are a
 
 ## Design foundation
 
-The original Phases 1–4 dossier starts at `docs/README.md`. To view its standalone component board, open `design-system/index.html`. Phases 6–7 add the collection/product routes and material exploration. Phase 8 adds the bespoke journey, configurator and draft inquiry. Live inquiry delivery, later brand pages and AI concierge remain pending.
+The original Phases 1–4 dossier starts at `docs/README.md`. To view its standalone component board, open `design-system/index.html`. Phases 6–7 add the collection/product routes and material exploration. Phase 8 adds the bespoke journey, configurator and draft inquiry. Phase 9 adds the brand and project pages. Phase 10 adds the guided Stone Concierge and its AI integration contract. Live inquiry delivery and external AI inference remain unconnected.
 
 ## Bespoke content and delivery
 
@@ -121,3 +122,30 @@ Before enabling submission, implement the `LeadRepository`, shared `InquiryRateL
 `qualifyInquiry` scores brief completeness (product interest, dimensions, quantity, timeline and budget), with reasons and a rule version. It does not establish buyer value, pricing or lead priority and is not yet connected to a CRM.
 
 `analytics.ts` dispatches local `sh-marbles:analytics` events: `configurator_completed`, `inquiry_started`, `brief_exported`. No external collector is installed. Connect an approved consent-aware adapter later; never add names, contact details, free text, filenames or budget/destination data. No `inquiry_submitted` event is emitted because nothing has been received.
+
+## Brand pages and interior studies (Phase 9)
+
+Routes: `/craftsmanship`, `/about`, `/projects`, `/projects/[slug]`, `/trade`, `/contact`. These extend the dark cinematic visual direction. Their common visual components are in `src/components/studio-ui.tsx`, with styles in `src/app/studio.css`. The shared navigation and footer now expose all eight primary destinations.
+
+Edit the six illustrative interior studies and seven craft discussion stages in `src/content/studio.ts`. Studies have stable slugs, sector, setting, narrative, considerations, a supplied image and a related product slug. The `StudioRepository` boundary can later read from a CMS. Every current record has `status: interior-study` and null client/location/completion fields. Hospitality and commercial categories are proposed application directions, not installed projects or verified material suitability. Do not turn these into client case studies without approved facts, permissions and corresponding schema/UI changes.
+
+The craft page presents decisions and questions for a project, not a documented production tour. The original workshop photograph is clearly captioned; there are no fabricated makers, videos, capacity claims or certifications. About copy uses only the supplied brand positioning.
+
+Trade sample/drawing requests, project references and contact paths use `BriefLink` to carry context into the Phase 8 inquiry in memory. Existing notes are preserved. New-tab links open the inquiry without memory context. The downloadable `public/resources/SH-MARBLES-trade-brief-checklist.txt` is a planning checklist, not a technical drawing or commercial commitment. Official contacts remain unconfigured; there are no invented email, WhatsApp, address or social links.
+
+Run `pnpm qa:studio` against the local production server for responsive screenshots, Axe checks, study filters, detail routes, metadata, native disclosures, menu keyboard behavior, downloads and contextual handoffs. Output is under ignored `output/playwright/studio/`; final evidence and limitations are in `docs/14-phase-9-handoff.md`.
+
+## Phase 10 — Stone Concierge
+
+Open `/concierge` for the guided consultation. It collects a piece type, setting, style, colour and optional practical details, then selects existing visual catalogue references. Visitors can revise answers, download a direction or add it to their local project brief. Existing notes are preserved. Entry points are on the homepage, Contact page and footer.
+
+**Live AI is not configured.** The functional fallback uses visual catalogue matching; it does not infer price, stock, stone identity, suitability or shipping. The provider interface, output allowlist and timeout are ready for a future server adapter. No new dependencies or environment variables are required. Consult `docs/16-phase-10-handoff.md` before enabling external AI: add provider credentials, shared abuse/spending controls and the appropriate privacy disclosure first.
+
+Preferences are processed by this site's API and are not persisted or sent to external AI. Consultation state lives in tab memory and clears on refresh. Preparing a project brief does not submit it.
+
+```sh
+pnpm test:concierge
+pnpm qa:concierge # requires the local server and installed Edge
+```
+
+The content source remains `src/content/catalogue.ts`; edit its typed product/material records and image references to update concierge suggestions as well as the collection pages. Ranking and allowed response fields live in `src/features/concierge/model.ts`; future model adapters implement `ConciergeProvider` from `service.ts`. The browser report is `docs/phase-10-qa-results.json`.

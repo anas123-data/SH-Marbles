@@ -1,0 +1,382 @@
+{
+  "responsive": [
+    {
+      "route": "/craftsmanship",
+      "width": 375,
+      "overflow": false,
+      "imagesLoaded": true
+    },
+    {
+      "route": "/craftsmanship",
+      "width": 390,
+      "overflow": false,
+      "imagesLoaded": true
+    },
+    {
+      "route": "/craftsmanship",
+      "width": 430,
+      "overflow": false,
+      "imagesLoaded": true
+    },
+    {
+      "route": "/craftsmanship",
+      "width": 768,
+      "overflow": false,
+      "imagesLoaded": true
+    },
+    {
+      "route": "/craftsmanship",
+      "width": 1024,
+      "overflow": false,
+      "imagesLoaded": true
+    },
+    {
+      "route": "/craftsmanship",
+      "width": 1440,
+      "overflow": false,
+      "imagesLoaded": true
+    },
+    {
+      "route": "/craftsmanship",
+      "width": 1920,
+      "overflow": false,
+      "imagesLoaded": true
+    },
+    {
+      "route": "/projects",
+      "width": 375,
+      "overflow": false,
+      "imagesLoaded": true
+    },
+    {
+      "route": "/projects",
+      "width": 390,
+      "overflow": false,
+      "imagesLoaded": true
+    },
+    {
+      "route": "/projects",
+      "width": 430,
+      "overflow": false,
+      "imagesLoaded": true
+    },
+    {
+      "route": "/projects",
+      "width": 768,
+      "overflow": false,
+      "imagesLoaded": true
+    },
+    {
+      "route": "/projects",
+      "width": 1024,
+      "overflow": false,
+      "imagesLoaded": true
+    },
+    {
+      "route": "/projects",
+      "width": 1440,
+      "overflow": false,
+      "imagesLoaded": true
+    },
+    {
+      "route": "/projects",
+      "width": 1920,
+      "overflow": false,
+      "imagesLoaded": true
+    },
+    {
+      "route": "/projects/a-quiet-counterpoint",
+      "width": 375,
+      "overflow": false,
+      "imagesLoaded": true
+    },
+    {
+      "route": "/projects/a-quiet-counterpoint",
+      "width": 390,
+      "overflow": false,
+      "imagesLoaded": true
+    },
+    {
+      "route": "/projects/a-quiet-counterpoint",
+      "width": 430,
+      "overflow": false,
+      "imagesLoaded": true
+    },
+    {
+      "route": "/projects/a-quiet-counterpoint",
+      "width": 768,
+      "overflow": false,
+      "imagesLoaded": true
+    },
+    {
+      "route": "/projects/a-quiet-counterpoint",
+      "width": 1024,
+      "overflow": false,
+      "imagesLoaded": true
+    },
+    {
+      "route": "/projects/a-quiet-counterpoint",
+      "width": 1440,
+      "overflow": false,
+      "imagesLoaded": true
+    },
+    {
+      "route": "/projects/a-quiet-counterpoint",
+      "width": 1920,
+      "overflow": false,
+      "imagesLoaded": true
+    },
+    {
+      "route": "/about",
+      "width": 375,
+      "overflow": false,
+      "imagesLoaded": true
+    },
+    {
+      "route": "/about",
+      "width": 390,
+      "overflow": false,
+      "imagesLoaded": true
+    },
+    {
+      "route": "/about",
+      "width": 430,
+      "overflow": false,
+      "imagesLoaded": true
+    },
+    {
+      "route": "/about",
+      "width": 768,
+      "overflow": false,
+      "imagesLoaded": true
+    },
+    {
+      "route": "/about",
+      "width": 1024,
+      "overflow": false,
+      "imagesLoaded": true
+    },
+    {
+      "route": "/about",
+      "width": 1440,
+      "overflow": false,
+      "imagesLoaded": true
+    },
+    {
+      "route": "/about",
+      "width": 1920,
+      "overflow": false,
+      "imagesLoaded": true
+    },
+    {
+      "route": "/trade",
+      "width": 375,
+      "overflow": false,
+      "imagesLoaded": true
+    },
+    {
+      "route": "/trade",
+      "width": 390,
+      "overflow": false,
+      "imagesLoaded": true
+    },
+    {
+      "route": "/trade",
+      "width": 430,
+      "overflow": false,
+      "imagesLoaded": true
+    },
+    {
+      "route": "/trade",
+      "width": 768,
+      "overflow": false,
+      "imagesLoaded": true
+    },
+    {
+      "route": "/trade",
+      "width": 1024,
+      "overflow": false,
+      "imagesLoaded": true
+    },
+    {
+      "route": "/trade",
+      "width": 1440,
+      "overflow": false,
+      "imagesLoaded": true
+    },
+    {
+      "route": "/trade",
+      "width": 1920,
+      "overflow": false,
+      "imagesLoaded": true
+    },
+    {
+      "route": "/contact",
+      "width": 375,
+      "overflow": false,
+      "imagesLoaded": true
+    },
+    {
+      "route": "/contact",
+      "width": 390,
+      "overflow": false,
+      "imagesLoaded": true
+    },
+    {
+      "route": "/contact",
+      "width": 430,
+      "overflow": false,
+      "imagesLoaded": true
+    },
+    {
+      "route": "/contact",
+      "width": 768,
+      "overflow": false,
+      "imagesLoaded": true
+    },
+    {
+      "route": "/contact",
+      "width": 1024,
+      "overflow": false,
+      "imagesLoaded": true
+    },
+    {
+      "route": "/contact",
+      "width": 1440,
+      "overflow": false,
+      "imagesLoaded": true
+    },
+    {
+      "route": "/contact",
+      "width": 1920,
+      "overflow": false,
+      "imagesLoaded": true
+    }
+  ],
+  "accessibility": [
+    {
+      "state": "/craftsmanship / 390",
+      "violations": []
+    },
+    {
+      "state": "/craftsmanship / 1440",
+      "violations": []
+    },
+    {
+      "state": "/projects / 390",
+      "violations": []
+    },
+    {
+      "state": "/projects / 1440",
+      "violations": []
+    },
+    {
+      "state": "/projects/a-quiet-counterpoint / 390",
+      "violations": []
+    },
+    {
+      "state": "/projects/a-quiet-counterpoint / 1440",
+      "violations": []
+    },
+    {
+      "state": "/about / 390",
+      "violations": []
+    },
+    {
+      "state": "/about / 1440",
+      "violations": []
+    },
+    {
+      "state": "/trade / 390",
+      "violations": []
+    },
+    {
+      "state": "/trade / 1440",
+      "violations": []
+    },
+    {
+      "state": "/contact / 390",
+      "violations": []
+    },
+    {
+      "state": "/contact / 1440",
+      "violations": []
+    },
+    {
+      "state": "Commercial filter / desktop",
+      "violations": []
+    },
+    {
+      "state": "Craft stages expanded / mobile",
+      "violations": []
+    },
+    {
+      "state": "Expanded eight-page mobile navigation",
+      "violations": []
+    }
+  ],
+  "routes": [
+    {
+      "route": "/craftsmanship",
+      "status": 200,
+      "title": "Craftsmanship \u2014 From Stone to Sculpture \u2014 SH MARBLES"
+    },
+    {
+      "route": "/projects",
+      "status": 200,
+      "title": "Projects &amp; Interior Studies \u2014 SH MARBLES"
+    },
+    {
+      "route": "/projects/a-quiet-counterpoint",
+      "status": 200,
+      "title": "A quiet counterpoint \u2014 Interior Study \u2014 SH MARBLES"
+    },
+    {
+      "route": "/about",
+      "status": 200,
+      "title": "About \u2014 The SH MARBLES Perspective \u2014 SH MARBLES"
+    },
+    {
+      "route": "/trade",
+      "status": 200,
+      "title": "Architects &amp; Designers \u2014 Project Collaboration \u2014 SH MARBLES"
+    },
+    {
+      "route": "/contact",
+      "status": 200,
+      "title": "Contact \u2014 Begin a Conversation \u2014 SH MARBLES"
+    },
+    {
+      "route": "/projects/a-rhythm-in-burgundy",
+      "status": 200,
+      "title": "A rhythm in burgundy \u2014 Interior Study \u2014 SH MARBLES"
+    },
+    {
+      "route": "/projects/a-warmer-welcome",
+      "status": 200,
+      "title": "A warmer welcome \u2014 Interior Study \u2014 SH MARBLES"
+    },
+    {
+      "route": "/projects/an-amber-moment",
+      "status": 200,
+      "title": "An amber moment \u2014 Interior Study \u2014 SH MARBLES"
+    },
+    {
+      "route": "/projects/room-to-pause",
+      "status": 200,
+      "title": "Room to pause \u2014 Interior Study \u2014 SH MARBLES"
+    },
+    {
+      "route": "/projects/a-soft-colour-note",
+      "status": 200,
+      "title": "A soft colour note \u2014 Interior Study \u2014 SH MARBLES"
+    }
+  ],
+  "interactions": [
+    "All sector filters and keyboard radio navigation; study-to-inquiry context; request changes preserve notes; dark theme releases on legacy route",
+    "Trade checklist downloads actual planning content; drawing and sample contexts reach the detailed brief",
+    "Craft disclosure keyboard controls; expanded menu scroll, Escape, focus and navigation; contact routing without fabricated contact links",
+    "Interior studies render without JavaScript; native craft disclosures work without JavaScript"
+  ],
+  "errors": []
+}

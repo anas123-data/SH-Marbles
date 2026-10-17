@@ -1,6 +1,6 @@
 # SH MARBLES — Foundation dossier
 
-The original Phases 1–4 foundation dossier is preserved below. See the [Phase 5 handoff](07-phase-5-handoff.md), [Phases 6–7 plan](08-phase-6-7-plan.md), [Phases 6–7 handoff](09-phase-6-7-handoff.md), [Phase 8 plan](10-phase-8-plan.md), [Phase 8 handoff](11-phase-8-handoff.md) and root README for the current application. Earlier documents are historical planning snapshots.
+The original Phases 1–4 foundation dossier is preserved below. See the [Phase 5 handoff](07-phase-5-handoff.md), [Phases 6–7 plan](08-phase-6-7-plan.md), [Phases 6–7 handoff](09-phase-6-7-handoff.md), [Phase 8 plan](10-phase-8-plan.md), [Phase 8 handoff](11-phase-8-handoff.md), [Phase 9 plan](13-phase-9-plan.md), [Phase 9 handoff](14-phase-9-handoff.md), [Phase 10 plan](15-phase-10-plan.md), [Phase 10 handoff](16-phase-10-handoff.md) and root README for the current application. Earlier documents are historical planning snapshots.
 
 1. [Discovery and asset audit](01-discovery.md)
 2. [Brand and creative direction](02-brand-and-creative-direction.md)

@@ -78,9 +78,12 @@ async function main() {
     assert.ok(await page.getByRole('button',{name:'Plan a piece like this'}).evaluate(e=>e===document.activeElement));
     assert.equal(await page.evaluate(()=>document.body.style.overflow),'');
     result.interactions.push('Project context; editable draft; clipboard; text download; Escape; focus and scroll restoration');
-    await page.getByRole('button',{name:'Plan a project together'}).click();
-    assert.equal(await page.locator('#brief-interest').inputValue(),'An architectural / trade project');
-    await page.getByRole('button',{name:'Close project brief'}).click();
+    await page.getByRole('link',{name:'For architects & designers',exact:true}).click();
+    await page.waitForURL('**/trade');
+    await page.getByRole('link',{name:'Prepare a trade inquiry',exact:true}).click();
+    await page.waitForURL('**/bespoke/inquiry');
+    assert.equal(await page.locator('#inquiry-interest').inputValue(),'An architectural / trade project');
+    await page.goto('http://127.0.0.1:3000/');
     await page.setViewportSize({width:390,height:844});
     await page.getByRole('button',{name:'Menu',exact:true}).click();
     assert.equal(await page.locator('body').evaluate(e=>e.style.overflow),'hidden');

@@ -29,7 +29,7 @@ export function Header() {
     </header>
     <dialog id="mobile-menu" ref={menu} className="menu-dialog" aria-label="Main navigation" onClose={() => { setOpen(false); menuButton.current?.focus(); }}>
       <div className="menu-dialog-top"><Wordmark /><button type="button" className="icon-button" onClick={close} aria-label="Close menu">×</button></div>
-      <nav aria-label="Mobile navigation">{navigation.map((item, index) => <Link key={item.href} href={item.href} onClick={close} aria-current={active(item.href) ? 'page' : undefined}><span className="eyebrow">0{index + 1}</span>{item.label}<Arrow /></Link>)}<Link href="/#project" onClick={close}><span className="eyebrow">05</span>Start a project<Arrow /></Link></nav>
+      <nav aria-label="Mobile navigation">{navigation.map((item, index) => <Link key={item.href} href={item.href} onClick={close} aria-current={active(item.href) ? 'page' : undefined}><span className="eyebrow">0{index + 1}</span>{item.label}<Arrow /></Link>)}<Link href="/bespoke/inquiry" onClick={close}><span className="eyebrow">09</span>Start a project<Arrow /></Link></nav>
       <p className="menu-footnote">Stone, given purpose.<br /><span>Tables · Basins · Objects · Bespoke</span></p>
     </dialog>
   </>;

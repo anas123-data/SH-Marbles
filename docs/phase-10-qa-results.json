@@ -1,0 +1,261 @@
+{
+  "responsive": [
+    {
+      "state": "space",
+      "width": 375,
+      "overflow": false,
+      "imagesLoaded": true
+    },
+    {
+      "state": "space",
+      "width": 390,
+      "overflow": false,
+      "imagesLoaded": true
+    },
+    {
+      "state": "space",
+      "width": 430,
+      "overflow": false,
+      "imagesLoaded": true
+    },
+    {
+      "state": "space",
+      "width": 768,
+      "overflow": false,
+      "imagesLoaded": true
+    },
+    {
+      "state": "space",
+      "width": 1024,
+      "overflow": false,
+      "imagesLoaded": true
+    },
+    {
+      "state": "space",
+      "width": 1440,
+      "overflow": false,
+      "imagesLoaded": true
+    },
+    {
+      "state": "space",
+      "width": 1920,
+      "overflow": false,
+      "imagesLoaded": true
+    },
+    {
+      "state": "palette",
+      "width": 375,
+      "overflow": false,
+      "imagesLoaded": true
+    },
+    {
+      "state": "palette",
+      "width": 390,
+      "overflow": false,
+      "imagesLoaded": true
+    },
+    {
+      "state": "palette",
+      "width": 430,
+      "overflow": false,
+      "imagesLoaded": true
+    },
+    {
+      "state": "palette",
+      "width": 768,
+      "overflow": false,
+      "imagesLoaded": true
+    },
+    {
+      "state": "palette",
+      "width": 1024,
+      "overflow": false,
+      "imagesLoaded": true
+    },
+    {
+      "state": "palette",
+      "width": 1440,
+      "overflow": false,
+      "imagesLoaded": true
+    },
+    {
+      "state": "palette",
+      "width": 1920,
+      "overflow": false,
+      "imagesLoaded": true
+    },
+    {
+      "state": "details",
+      "width": 375,
+      "overflow": false,
+      "imagesLoaded": true
+    },
+    {
+      "state": "details",
+      "width": 390,
+      "overflow": false,
+      "imagesLoaded": true
+    },
+    {
+      "state": "details",
+      "width": 430,
+      "overflow": false,
+      "imagesLoaded": true
+    },
+    {
+      "state": "details",
+      "width": 768,
+      "overflow": false,
+      "imagesLoaded": true
+    },
+    {
+      "state": "details",
+      "width": 1024,
+      "overflow": false,
+      "imagesLoaded": true
+    },
+    {
+      "state": "details",
+      "width": 1440,
+      "overflow": false,
+      "imagesLoaded": true
+    },
+    {
+      "state": "details",
+      "width": 1920,
+      "overflow": false,
+      "imagesLoaded": true
+    },
+    {
+      "state": "results",
+      "width": 375,
+      "overflow": false,
+      "imagesLoaded": true
+    },
+    {
+      "state": "results",
+      "width": 390,
+      "overflow": false,
+      "imagesLoaded": true
+    },
+    {
+      "state": "results",
+      "width": 430,
+      "overflow": false,
+      "imagesLoaded": true
+    },
+    {
+      "state": "results",
+      "width": 768,
+      "overflow": false,
+      "imagesLoaded": true
+    },
+    {
+      "state": "results",
+      "width": 1024,
+      "overflow": false,
+      "imagesLoaded": true
+    },
+    {
+      "state": "results",
+      "width": 1440,
+      "overflow": false,
+      "imagesLoaded": true
+    },
+    {
+      "state": "results",
+      "width": 1920,
+      "overflow": false,
+      "imagesLoaded": true
+    }
+  ],
+  "accessibility": [
+    {
+      "state": "space/390",
+      "violations": []
+    },
+    {
+      "state": "space/1440",
+      "violations": []
+    },
+    {
+      "state": "palette/390",
+      "violations": []
+    },
+    {
+      "state": "palette/1440",
+      "violations": []
+    },
+    {
+      "state": "details/390",
+      "violations": []
+    },
+    {
+      "state": "details/1440",
+      "violations": []
+    },
+    {
+      "state": "Recoverable request error",
+      "violations": []
+    },
+    {
+      "state": "results/390",
+      "violations": []
+    },
+    {
+      "state": "results/1440",
+      "violations": []
+    },
+    {
+      "state": "Confirm reset",
+      "violations": []
+    }
+  ],
+  "interactions": [
+    "Required steps, keyboard radio selection and focus movement",
+    "Seven-width layouts and image loading for all four states",
+    "Failed request recovery preserves answers",
+    "Correct warm basin reference, outdoor caveat and valid catalogue links",
+    "Download contains preferences and confirmation limits",
+    "Results survive catalogue navigation; refresh clears memory",
+    "Brief handoff preserves notes, avoids duplicate summaries and blocks overflow without truncation",
+    "Architectural requests avoid invented product matches",
+    "Reset confirmation and cancellation",
+    "Analytics contain event names/mode only"
+  ],
+  "api": [
+    {
+      "label": "Valid catalogue consultation",
+      "status": 200
+    },
+    {
+      "label": "Cross-origin rejected",
+      "status": 403
+    },
+    {
+      "label": "Non-JSON rejected",
+      "status": 415
+    },
+    {
+      "label": "Malformed JSON rejected",
+      "status": 400
+    },
+    {
+      "label": "Oversize rejected",
+      "status": 413
+    },
+    {
+      "label": "Unknown fields rejected",
+      "status": 422
+    },
+    {
+      "label": "Invalid enum rejected",
+      "status": 422
+    },
+    {
+      "label": "HTML input rejected",
+      "status": 422
+    }
+  ],
+  "errors": []
+}

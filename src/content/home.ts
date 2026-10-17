@@ -2,7 +2,11 @@ export const navigation = [
   { label: 'Collections', href: '/collections' },
   { label: 'Stone Library', href: '/stone-library' },
   { label: 'Bespoke', href: '/bespoke' },
-  { label: 'Our perspective', href: '/#perspective' },
+  { label: 'Projects', href: '/projects' },
+  { label: 'Craftsmanship', href: '/craftsmanship' },
+  { label: 'About', href: '/about' },
+  { label: 'Trade', href: '/trade' },
+  { label: 'Contact', href: '/contact' },
 ];
 
 // Editorial studies from supplied images, not verified catalogue SKUs.

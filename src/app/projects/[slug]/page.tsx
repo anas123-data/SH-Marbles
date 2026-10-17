@@ -1,0 +1,16 @@
+import Link from 'next/link';
+import { notFound } from 'next/navigation';
+import { catalogueMetadata } from '@/content/metadata';
+import { catalogue } from '@/content/catalogue';
+import { studio } from '@/content/studio';
+import { BriefLink } from '@/components/brief-link';
+import { StudioFigure, StudioShell } from '@/components/studio-ui';
+import { Arrow } from '@/components/ui';
+export async function generateStaticParams() { return (await studio.listStudies()).map(item=>({slug:item.slug})); }
+export async function generateMetadata({params}:{params:Promise<{slug:string}>}) { const study=await studio.getStudy((await params).slug); return study ? catalogueMetadata(study.seo) : {}; }
+export default async function ProjectPage({params}:{params:Promise<{slug:string}>}) {
+  const study=await studio.getStudy((await params).slug); if(!study) notFound();
+  const [product, studies]=await Promise.all([catalogue.getProduct(study.productSlug),studio.listStudies()]);
+  const index=studies.findIndex(item=>item.id===study.id); const next=studies[(index+1)%studies.length];
+  return <StudioShell title={study.title} parent={{label:'Projects',href:'/projects'}}><section className="project-story-hero shell"><StudioFigure image={study.image} priority caption="Interior study · illustrative direction, not a completed project" /><div><p className="eyebrow">{study.sector} / Interior study</p><h1>{study.title}</h1><p className="project-setting">{study.setting}</p><p>{study.description}</p><BriefLink sector={study.sector} interest={study.sector==='Residential'?'A bespoke piece':'An architectural / trade project'} reference={{piece:`Interior study: ${study.title}`,intent:'Explore this illustrative direction for my space'}}>Use this as a starting point</BriefLink></div></section><section className="project-narrative shell"><p className="eyebrow">The composition</p><div><h2>A way of looking<br /><em>at the space.</em></h2><p>{study.narrative}</p></div></section><section className="project-considerations shell" aria-labelledby="consider-title"><p className="eyebrow">For your own project</p><h2 id="consider-title">Three things<br /><em>to consider.</em></h2><div>{study.considerations.map((item,index)=><article key={item.title}><span className="eyebrow">0{index+1}</span><h3>{item.title}</h3><p>{item.text}</p></article>)}</div></section>{product&&<section className="study-product-reference shell"><div><p className="eyebrow">From the collection</p><h2>{product.title}</h2><p>Explore the form behind this study. Product specifications, material identity and availability require confirmation.</p><Link className="text-link" href={`/products/${product.slug}`}>View the piece<Arrow /></Link></div><StudioFigure image={product.images[0]} caption="Collection reference · supplied imagery" /></section>}<div className="studio-disclosure shell"><p>This page is an interior study. No client, project location, completion date or manufacturing specification is asserted.</p></div><Link className="next-study shell" href={`/projects/${next.slug}`}><span className="eyebrow">Next perspective</span><h2>{next.title}<Arrow /></h2></Link></StudioShell>;
+}
