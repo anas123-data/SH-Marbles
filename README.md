@@ -1,6 +1,6 @@
 # SH MARBLES
 
-An editorial website for a marble furniture and handicraft brand. **Phases 1–10 are implemented locally:** foundation, homepage, collections, Stone Library, bespoke journey, brand pages and the Stone Concierge in guided catalogue mode. Live AI and inquiry delivery are not connected. Phases 11–12 remain pending.
+An editorial website for a marble furniture and handicraft brand. **Phases 1–11 are implemented locally:** foundation, homepage, collections, Stone Library, bespoke journey, brand pages, the Stone Concierge in guided catalogue mode, and SEO foundations. Live AI and inquiry delivery are not connected. Phase 11 improves measured loading, but the homepage and Stone Library remain below the 90 performance target. Final QA and public deployment verification remain pending.
 
 
 The homepage now uses the owner-selected dark cinematic direction: charcoal surfaces, an image-led hero and revised typography/layouts. The dark direction now covers the homepage, Phase 9 brand/project pages and the Stone Concierge; collection, material and bespoke routes retain their previous styling. See `docs/12-dark-cinematic-homepage.md`.
@@ -101,9 +101,9 @@ Browser scripts default to installed Microsoft Edge. Set `QA_BROWSER_CHANNEL=chr
 
 ## Deployment and release boundary
 
-The app can build on a Node-compatible Next.js host; no deployment is performed here. Before public launch: confirm image rights/product claims; supply the domain and real contact channels; implement durable inquiry delivery and privacy policy; configure canonical/share URLs; complete production metadata/schema and the remaining phases. The current metadata and `robots.txt` intentionally prevent indexing. Do not remove those safeguards simply to raise an SEO audit score.
+The app can build on a Node-compatible Next.js host; no deployment is performed here. Before public launch: confirm image rights/product claims; supply the domain and real contact channels; implement durable inquiry delivery and privacy policy; configure the real production origin and release indexing flag; complete final QA and verify the public deployment. The current metadata and `robots.txt` intentionally prevent indexing. Do not remove those safeguards simply to raise an SEO audit score.
 
-Secrets belong only in server environment variables when real integrations are added. No keys or `.env` files are committed. See `docs/04-technical-architecture.md` for planned server boundaries and the phase handoffs in `docs/` for verification evidence. Optional QA settings: `QA_BROWSER_CHANNEL` chooses an installed browser; `QA_BASE_URL` overrides the catalogue test's localhost URL. No application environment variables are currently required.
+Secrets belong only in server environment variables when real integrations are added. No keys or `.env` files are committed. See `docs/04-technical-architecture.md` for planned server boundaries and the phase handoffs in `docs/` for verification evidence. Optional QA settings: `QA_BROWSER_CHANNEL` chooses an installed browser; `QA_BASE_URL` overrides the catalogue test's localhost URL. No application environment variables are required locally. Optional Phase 11 origin/indexing settings are documented below and in `.env.example`.
 
 ## Design foundation
 
@@ -149,3 +149,20 @@ pnpm qa:concierge # requires the local server and installed Edge
 ```
 
 The content source remains `src/content/catalogue.ts`; edit its typed product/material records and image references to update concierge suggestions as well as the collection pages. Ranking and allowed response fields live in `src/features/concierge/model.ts`; future model adapters implement `ConciergeProvider` from `service.ts`. The browser report is `docs/phase-10-qa-results.json`.
+
+## Phase 11 — SEO, performance and publication
+
+Metadata now includes unique canonicals and social cards when a real public origin is configured. `SITE_URL` takes precedence over Vercel’s actual `VERCEL_PROJECT_PRODUCTION_URL`. `SITE_INDEXABLE=true` enables indexing only in production with a valid origin; previews stay noindex. The inquiry, configurator and concierge remain noindex. Rebuild after changing settings. No domain is invented when these settings are absent.
+
+The sitemap reads the same catalogue/project repositories as the pages. Organization/WebSite JSON-LD and breadcrumb microdata are included. Visual studies use CreativeWork schema; verified product records can use Product schema without made-up offers or ratings. The branded share image is `/social/sh-marbles.png`.
+
+```sh
+pnpm test:seo
+pnpm qa:seo # running production preview + installed Edge
+```
+
+For an actual public deployment test, set `QA_BASE_URL`, `QA_SITE_ORIGIN` and `QA_INDEXABLE=true` to the verified production values. Do not use this to disguise a preview as a live release.
+
+Homepage mobile LCP improved from 4.0 s to 2.5 s in local Lighthouse measurements; CLS stayed zero. Performance measured 83 homepage, 85 Stone Library and 90 product page, so the overall 90 target is not yet achieved. Accessibility and best-practice scores were 100. Preview SEO scored 66 because indexing is intentionally disabled. Raw and summarized evidence, remaining work and deployment status are documented in `docs/18-phase-11-handoff.md`.
+
+Public deployment is authorized but not yet verified: Vercel currently denies access to the created `sh-marbles` project, and the owner is reconnecting the integration. There is no confirmed live URL. `scripts/prepare-deployment.py` can prepare an allowlisted direct upload once access is restored; it is not itself a deployment. GitHub linking also requires the account’s Login Connection.

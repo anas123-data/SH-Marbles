@@ -17,7 +17,9 @@
     "qa:bespoke": "node scripts/qa-bespoke.cjs",
     "qa:studio": "node scripts/qa-studio.cjs",
     "test:concierge": "node --test --test-isolation=none scripts/concierge.test.mjs",
-    "qa:concierge": "node scripts/qa-concierge.cjs"
+    "qa:concierge": "node scripts/qa-concierge.cjs",
+    "test:seo": "node --test --test-isolation=none scripts/seo.test.mjs",
+    "qa:seo": "node scripts/qa-seo.cjs"
   },
   "dependencies": {
     "next": "16.4.0",

@@ -10,7 +10,7 @@ import { Arrow } from '@/components/ui';
 
 type Props = { params: Promise<{ slug: string }> };
 export async function generateStaticParams() { return (await catalogue.listMaterials()).map(item => ({ slug: item.slug })); }
-export async function generateMetadata({ params }: Props): Promise<Metadata> { const material = await catalogue.getMaterial((await params).slug); return material ? catalogueMetadata(material.seo) : {}; }
+export async function generateMetadata({ params }: Props): Promise<Metadata> { const material = await catalogue.getMaterial((await params).slug); return material ? catalogueMetadata(material.seo, { path: `/stone-library/${material.slug}`, image: material.image.src, imageAlt: material.image.alt }) : {}; }
 
 export default async function MaterialPage({ params }: Props) {
   const material = await catalogue.getMaterial((await params).slug);

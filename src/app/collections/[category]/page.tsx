@@ -11,7 +11,7 @@ import { ProjectInvitation } from '@/components/site-footer';
 
 type Props = { params: Promise<{ category: string }> };
 export async function generateStaticParams() { return (await catalogue.listCollections()).map(item => ({ category: item.id })); }
-export async function generateMetadata({ params }: Props): Promise<Metadata> { const collection = await catalogue.getCollection((await params).category); return collection ? catalogueMetadata(collection.seo) : {}; }
+export async function generateMetadata({ params }: Props): Promise<Metadata> { const collection = await catalogue.getCollection((await params).category); return collection ? catalogueMetadata(collection.seo, { path: `/collections/${collection.id}`, image: collection.image.src, imageAlt: collection.image.alt }) : {}; }
 
 export default async function CollectionPage({ params }: Props) {
   const collection = await catalogue.getCollection((await params).category);

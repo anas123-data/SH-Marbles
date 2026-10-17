@@ -1,0 +1,176 @@
+{
+  "environment": "Local production build, Lighthouse mobile simulation in Chrome; not field Core Web Vitals.",
+  "notes": [
+    "SEO is intentionally limited by preview noindex and robots policy.",
+    "The homepage and Stone Library did not reach the performance target of 90.",
+    "TBT varies across runs; all runs are retained rather than selecting the best score.",
+    "Full raw reports are retained under ignored output/."
+  ],
+  "measurements": [
+    {
+      "label": "Homepage baseline",
+      "url": "http://127.0.0.1:3000/",
+      "scores": {
+        "performance": 82,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 66
+      },
+      "metrics": {
+        "first-contentful-paint": {
+          "display": "1.2Â s",
+          "value": 1194.33645
+        },
+        "largest-contentful-paint": {
+          "display": "4.0Â s",
+          "value": 3976.686924999999
+        },
+        "total-blocking-time": {
+          "display": "200Â ms",
+          "value": 202
+        },
+        "cumulative-layout-shift": {
+          "display": "0",
+          "value": 0
+        },
+        "speed-index": {
+          "display": "3.9Â s",
+          "value": 3871.5244374429967
+        }
+      },
+      "lighthouseVersion": "13.5.0"
+    },
+    {
+      "label": "Homepage intermediate",
+      "url": "http://127.0.0.1:3000/",
+      "scores": {
+        "performance": 75,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 66
+      },
+      "metrics": {
+        "first-contentful-paint": {
+          "display": "1.0Â s",
+          "value": 1047.1336000000001
+        },
+        "largest-contentful-paint": {
+          "display": "3.8Â s",
+          "value": 3779.3340000000003
+        },
+        "total-blocking-time": {
+          "display": "500Â ms",
+          "value": 500.43319999999994
+        },
+        "cumulative-layout-shift": {
+          "display": "0",
+          "value": 0
+        },
+        "speed-index": {
+          "display": "4.0Â s",
+          "value": 3965.7957115732597
+        }
+      },
+      "lighthouseVersion": "13.5.0"
+    },
+    {
+      "label": "Homepage final",
+      "url": "http://127.0.0.1:3000/",
+      "scores": {
+        "performance": 83,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 66
+      },
+      "metrics": {
+        "first-contentful-paint": {
+          "display": "1.1Â s",
+          "value": 1144.3478
+        },
+        "largest-contentful-paint": {
+          "display": "2.5Â s",
+          "value": 2466.5217000000002
+        },
+        "total-blocking-time": {
+          "display": "500Â ms",
+          "value": 498.32610000000045
+        },
+        "cumulative-layout-shift": {
+          "display": "0",
+          "value": 0
+        },
+        "speed-index": {
+          "display": "3.9Â s",
+          "value": 3874.000075173743
+        }
+      },
+      "lighthouseVersion": "13.5.0"
+    },
+    {
+      "label": "Stone Library",
+      "url": "http://127.0.0.1:3000/stone-library",
+      "scores": {
+        "performance": 85,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 66
+      },
+      "metrics": {
+        "first-contentful-paint": {
+          "display": "1.2Â s",
+          "value": 1157.5198
+        },
+        "largest-contentful-paint": {
+          "display": "3.7Â s",
+          "value": 3686.599
+        },
+        "total-blocking-time": {
+          "display": "190Â ms",
+          "value": 194
+        },
+        "cumulative-layout-shift": {
+          "display": "0",
+          "value": 0
+        },
+        "speed-index": {
+          "display": "3.6Â s",
+          "value": 3616.323033177711
+        }
+      },
+      "lighthouseVersion": "13.5.0"
+    },
+    {
+      "label": "Product page",
+      "url": "http://127.0.0.1:3000/products/fluted-round-basin",
+      "scores": {
+        "performance": 90,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 66
+      },
+      "metrics": {
+        "first-contentful-paint": {
+          "display": "1.0Â s",
+          "value": 955.0241
+        },
+        "largest-contentful-paint": {
+          "display": "3.1Â s",
+          "value": 3130.58435
+        },
+        "total-blocking-time": {
+          "display": "190Â ms",
+          "value": 193.00000000000034
+        },
+        "cumulative-layout-shift": {
+          "display": "0",
+          "value": 0
+        },
+        "speed-index": {
+          "display": "2.2Â s",
+          "value": 2170.3703145746504
+        }
+      },
+      "lighthouseVersion": "13.5.0"
+    }
+  ]
+}

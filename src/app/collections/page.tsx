@@ -9,7 +9,7 @@ import { ProductBrowser } from '@/components/product-browser';
 import { ProjectInvitation } from '@/components/site-footer';
 import { ProjectButton } from '@/components/project-dialog';
 
-export const metadata: Metadata = catalogueMetadata({ title: 'The Collections', description: 'Explore marble table, basin and decorative object studies. Discover a form, consider the material and begin a personal project with SH MARBLES.' });
+export const metadata: Metadata = catalogueMetadata({ title: 'The Collections', description: 'Explore marble table, basin and decorative object studies. Discover a form, consider the material and begin a personal project with SH MARBLES.' }, { path: '/collections' });
 
 export default async function CollectionsPage() {
   const [collections, products] = await Promise.all([catalogue.listCollections(), catalogue.listProducts()]);

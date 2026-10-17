@@ -3,7 +3,7 @@ import { catalogueMetadata } from '@/content/metadata';
 import { StudioFigure, StudioShell } from '@/components/studio-ui';
 import { BriefLink } from '@/components/brief-link';
 import { Arrow } from '@/components/ui';
-export const metadata = catalogueMetadata({ title: 'Architects & Designers — Project Collaboration', description: 'Prepare an architectural or trade brief for SH MARBLES: dimensions, material direction, sample and drawing requests, quantities and delivery requirements.' });
+export const metadata = catalogueMetadata({ title: 'Architects & Designers — Project Collaboration', description: 'Prepare an architectural or trade brief for SH MARBLES: dimensions, material direction, sample and drawing requests, quantities and delivery requirements.' }, { path: '/trade' });
 const topics = [
   ['Custom dimensions','Share plans, dimensions, intended use and fixing or support constraints. Feasibility is reviewed for the specific piece.'],
   ['Stone direction','Include a material name if known, or a colour reference. Ask for confirmation of stone identity, sourcing and availability.'],

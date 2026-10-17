@@ -7,7 +7,7 @@ import { BriefLink } from '@/components/brief-link';
 import { StudioFigure, StudioShell } from '@/components/studio-ui';
 import { Arrow } from '@/components/ui';
 export async function generateStaticParams() { return (await studio.listStudies()).map(item=>({slug:item.slug})); }
-export async function generateMetadata({params}:{params:Promise<{slug:string}>}) { const study=await studio.getStudy((await params).slug); return study ? catalogueMetadata(study.seo) : {}; }
+export async function generateMetadata({params}:{params:Promise<{slug:string}>}) { const study=await studio.getStudy((await params).slug); return study ? catalogueMetadata(study.seo, { path: `/projects/${study.slug}`, image: study.image.src, imageAlt: study.image.alt }) : {}; }
 export default async function ProjectPage({params}:{params:Promise<{slug:string}>}) {
   const study=await studio.getStudy((await params).slug); if(!study) notFound();
   const [product, studies]=await Promise.all([catalogue.getProduct(study.productSlug),studio.listStudies()]);

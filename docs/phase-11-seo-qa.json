@@ -1,0 +1,321 @@
+{
+  "routes": [
+    {
+      "route": "/",
+      "status": 200,
+      "title": "Stone, given purpose. — SH MARBLES",
+      "canonical": null,
+      "noindex": true
+    },
+    {
+      "route": "/collections",
+      "status": 200,
+      "title": "The Collections — SH MARBLES",
+      "canonical": null,
+      "noindex": true
+    },
+    {
+      "route": "/stone-library",
+      "status": 200,
+      "title": "The Stone Library — SH MARBLES",
+      "canonical": null,
+      "noindex": true
+    },
+    {
+      "route": "/projects",
+      "status": 200,
+      "title": "Projects & Interior Studies — SH MARBLES",
+      "canonical": null,
+      "noindex": true
+    },
+    {
+      "route": "/concierge",
+      "status": 200,
+      "title": "Stone Concierge — Find Your Direction — SH MARBLES",
+      "canonical": null,
+      "noindex": true
+    },
+    {
+      "route": "/bespoke/configure",
+      "status": 200,
+      "title": "The Design Table — Bespoke Configurator — SH MARBLES",
+      "canonical": null,
+      "noindex": true
+    },
+    {
+      "route": "/bespoke/inquiry",
+      "status": 200,
+      "title": "Your Bespoke Project Brief — SH MARBLES",
+      "canonical": null,
+      "noindex": true
+    },
+    {
+      "route": "/bespoke",
+      "status": 200,
+      "title": "Bespoke — Made for Your Space — SH MARBLES",
+      "canonical": null,
+      "noindex": true
+    },
+    {
+      "route": "/craftsmanship",
+      "status": 200,
+      "title": "Craftsmanship — From Stone to Sculpture — SH MARBLES",
+      "canonical": null,
+      "noindex": true
+    },
+    {
+      "route": "/about",
+      "status": 200,
+      "title": "About — The SH MARBLES Perspective — SH MARBLES",
+      "canonical": null,
+      "noindex": true
+    },
+    {
+      "route": "/trade",
+      "status": 200,
+      "title": "Architects & Designers — Project Collaboration — SH MARBLES",
+      "canonical": null,
+      "noindex": true
+    },
+    {
+      "route": "/contact",
+      "status": 200,
+      "title": "Contact — Begin a Conversation — SH MARBLES",
+      "canonical": null,
+      "noindex": true
+    },
+    {
+      "route": "/products/fluted-round-basin",
+      "status": 200,
+      "title": "Fluted round basin — SH MARBLES",
+      "canonical": null,
+      "noindex": true
+    },
+    {
+      "route": "/collections/tables",
+      "status": 200,
+      "title": "Marble Tables — SH MARBLES",
+      "canonical": null,
+      "noindex": true
+    },
+    {
+      "route": "/collections/basins",
+      "status": 200,
+      "title": "Marble Sinks & Basins — SH MARBLES",
+      "canonical": null,
+      "noindex": true
+    },
+    {
+      "route": "/collections/objects",
+      "status": 200,
+      "title": "Decorative Stone Objects — SH MARBLES",
+      "canonical": null,
+      "noindex": true
+    },
+    {
+      "route": "/products/cross-base-side-table",
+      "status": 200,
+      "title": "Cross-base side table — SH MARBLES",
+      "canonical": null,
+      "noindex": true
+    },
+    {
+      "route": "/products/fluted-rectangular-basin",
+      "status": 200,
+      "title": "Fluted rectangular basin — SH MARBLES",
+      "canonical": null,
+      "noindex": true
+    },
+    {
+      "route": "/products/rounded-vessel-basin",
+      "status": 200,
+      "title": "Rounded vessel basin — SH MARBLES",
+      "canonical": null,
+      "noindex": true
+    },
+    {
+      "route": "/products/rose-toned-vessel",
+      "status": 200,
+      "title": "Rose-toned vessel — SH MARBLES",
+      "canonical": null,
+      "noindex": true
+    },
+    {
+      "route": "/products/amber-toned-vessel",
+      "status": 200,
+      "title": "Amber-toned vessel — SH MARBLES",
+      "canonical": null,
+      "noindex": true
+    },
+    {
+      "route": "/products/carved-green-basin",
+      "status": 200,
+      "title": "Carved green basin — SH MARBLES",
+      "canonical": null,
+      "noindex": true
+    },
+    {
+      "route": "/products/stone-game-set",
+      "status": 200,
+      "title": "Stone game set — SH MARBLES",
+      "canonical": null,
+      "noindex": true
+    },
+    {
+      "route": "/stone-library/ink-and-ivory",
+      "status": 200,
+      "title": "Ink & ivory — Stone Study — SH MARBLES",
+      "canonical": null,
+      "noindex": true
+    },
+    {
+      "route": "/stone-library/warm-ivory",
+      "status": 200,
+      "title": "Warm ivory — Stone Study — SH MARBLES",
+      "canonical": null,
+      "noindex": true
+    },
+    {
+      "route": "/stone-library/burgundy",
+      "status": 200,
+      "title": "Burgundy — Stone Study — SH MARBLES",
+      "canonical": null,
+      "noindex": true
+    },
+    {
+      "route": "/stone-library/rose",
+      "status": 200,
+      "title": "Rose — Stone Study — SH MARBLES",
+      "canonical": null,
+      "noindex": true
+    },
+    {
+      "route": "/stone-library/amber",
+      "status": 200,
+      "title": "Amber — Stone Study — SH MARBLES",
+      "canonical": null,
+      "noindex": true
+    },
+    {
+      "route": "/stone-library/forest",
+      "status": 200,
+      "title": "Forest — Stone Study — SH MARBLES",
+      "canonical": null,
+      "noindex": true
+    },
+    {
+      "route": "/projects/a-quiet-counterpoint",
+      "status": 200,
+      "title": "A quiet counterpoint — Interior Study — SH MARBLES",
+      "canonical": null,
+      "noindex": true
+    },
+    {
+      "route": "/projects/a-rhythm-in-burgundy",
+      "status": 200,
+      "title": "A rhythm in burgundy — Interior Study — SH MARBLES",
+      "canonical": null,
+      "noindex": true
+    },
+    {
+      "route": "/projects/a-warmer-welcome",
+      "status": 200,
+      "title": "A warmer welcome — Interior Study — SH MARBLES",
+      "canonical": null,
+      "noindex": true
+    },
+    {
+      "route": "/projects/an-amber-moment",
+      "status": 200,
+      "title": "An amber moment — Interior Study — SH MARBLES",
+      "canonical": null,
+      "noindex": true
+    },
+    {
+      "route": "/projects/room-to-pause",
+      "status": 200,
+      "title": "Room to pause — Interior Study — SH MARBLES",
+      "canonical": null,
+      "noindex": true
+    },
+    {
+      "route": "/projects/a-soft-colour-note",
+      "status": 200,
+      "title": "A soft colour note — Interior Study — SH MARBLES",
+      "canonical": null,
+      "noindex": true
+    }
+  ],
+  "accessibility": [
+    {
+      "route": "/",
+      "width": 390,
+      "violations": []
+    },
+    {
+      "route": "/",
+      "width": 1440,
+      "violations": []
+    },
+    {
+      "route": "/products/fluted-round-basin",
+      "width": 390,
+      "violations": []
+    },
+    {
+      "route": "/products/fluted-round-basin",
+      "width": 1440,
+      "violations": []
+    },
+    {
+      "route": "/stone-library",
+      "width": 390,
+      "violations": []
+    },
+    {
+      "route": "/stone-library",
+      "width": 1440,
+      "violations": []
+    },
+    {
+      "route": "/trade",
+      "width": 390,
+      "violations": []
+    },
+    {
+      "route": "/trade",
+      "width": 1440,
+      "violations": []
+    },
+    {
+      "route": "/concierge",
+      "width": 390,
+      "violations": []
+    },
+    {
+      "route": "/concierge",
+      "width": 1440,
+      "violations": []
+    },
+    {
+      "route": "/bespoke/configure",
+      "width": 390,
+      "violations": []
+    },
+    {
+      "route": "/bespoke/configure",
+      "width": 1440,
+      "violations": []
+    }
+  ],
+  "errors": [],
+  "indexable": false,
+  "origin": null,
+  "socialCard": {
+    "width": 1200,
+    "height": 630,
+    "bytes": 604844,
+    "photoColours": 5117
+  },
+  "gallery": "Full image requested only on open; Escape closes it"
+}

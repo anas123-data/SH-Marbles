@@ -4,7 +4,7 @@ import { catalogueMetadata } from '@/content/metadata';
 import { Arrow } from '@/components/ui';
 import { Breadcrumbs } from '@/components/catalogue-ui';
 
-export const metadata = catalogueMetadata({ title: 'Bespoke — Made for Your Space', description: 'Begin a bespoke marble furniture or basin project with SH MARBLES. Explore form, colour and proportions, then prepare a personal project brief.' });
+export const metadata = catalogueMetadata({ title: 'Bespoke — Made for Your Space', description: 'Begin a bespoke marble furniture or basin project with SH MARBLES. Explore form, colour and proportions, then prepare a personal project brief.' }, { path: '/bespoke' });
 const process = [
   ['The idea', 'Bring a sketch, a photograph or simply the dimensions of your space.'],
   ['The stone', 'Explore colour and character. Request confirmation of stone identity, sourcing and a physical sample.'],

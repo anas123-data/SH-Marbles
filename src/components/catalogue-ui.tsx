@@ -4,7 +4,7 @@ import type { Material, Product } from '@/content/catalogue-models';
 import { Arrow } from './ui';
 
 export function Breadcrumbs({ items }: { items: { label: string; href?: string }[] }) {
-  return <nav className="breadcrumbs" aria-label="Breadcrumb"><ol><li><Link href="/">Home</Link></li>{items.map((item, index) => <li key={`${item.label}-${index}`}>{item.href ? <Link href={item.href}>{item.label}</Link> : <span aria-current="page">{item.label}</span>}</li>)}</ol></nav>;
+  return <nav className="breadcrumbs" aria-label="Breadcrumb"><ol itemScope itemType="https://schema.org/BreadcrumbList">{[{label:'Home',href:'/'},...items].map((item,index)=><li key={`${item.label}-${index}`} itemProp="itemListElement" itemScope itemType="https://schema.org/ListItem">{item.href?<Link href={item.href} itemProp="item"><span itemProp="name">{item.label}</span></Link>:<span itemProp="name" aria-current="page">{item.label}</span>}<meta itemProp="position" content={String(index+1)}/></li>)}</ol></nav>;
 }
 
 export function ProductCard({ product, index = 0 }: { product: Product; index?: number }) {

@@ -5,7 +5,7 @@ import { Breadcrumbs, SurfaceImage } from '@/components/catalogue-ui';
 import { StoneBrowser } from '@/components/stone-browser';
 import { ProjectInvitation } from '@/components/site-footer';
 
-export const metadata: Metadata = catalogueMetadata({ title: 'The Stone Library', description: 'Explore stone colour and vein studies, compare material directions and bring a considered palette to your marble furniture or basin project.' });
+export const metadata: Metadata = catalogueMetadata({ title: 'The Stone Library', description: 'Explore stone colour and vein studies, compare material directions and bring a considered palette to your marble furniture or basin project.' }, { path: '/stone-library' });
 
 export default async function StoneLibraryPage() {
   const materials = await catalogue.listMaterials();
