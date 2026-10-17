@@ -71,9 +71,15 @@ Edit homepage studies in `src/content/home.ts`; editorial sections are in `src/a
 
 Optional image regeneration: run `python scripts/prepare-homepage.py` and `python scripts/prepare-catalogue.py` with Pillow installed. Surface details use CSS crops of these same photographs and are labelled accordingly; they are not standalone slab scans. Font source and OFL licenses are in `design-system/assets/`. The logo treatment is typographic; obtain the original vector brand mark before final identity approval.
 
+### Owner-supplied wash basins (18 October 2026)
+
+Four product listings now precede the existing visual studies in Wash Basins: Green Onyx (PKR 52,000), Dark Emperador (two sizes, PKR 38,000 / 50,000), Luxury Onyx (PKR 50,000), and Ziarat White (14-inch diameter PKR 32,000 / 16-inch diameter PKR 38,000). Their source/image mapping is in `docs/basin-assets-2026-10-18.json`. Their typed records live in the corresponding `src/content/*-basin.ts` files, imported by the catalogue. Fourteen unchanged supplied JPEGs are in `public/products/`; `next/image` serves responsive optimized versions.
+
+Product records support optional PKR prices, size-specific variants, partial dimensions (including diameter), care, installation and natural variation notes. The selected variant updates the displayed price and is carried into the local inquiry brief. Supplied product facts are marked verified; stock, shipping, production time and unprovided measurements remain unconfirmed. Original long titles are retained under Product title, with concise display titles. No checkout, payment or inquiry delivery service has been added.
+
 ### Add a product
 
-Add a record through the `product()` factory in `src/content/catalogue.ts` with a stable unique slug, category, descriptive title, images, form, character and a related `materialStudyId`. Add optimized images to `public/media/` and record their source. The factory deliberately keeps unknown stone, dimensions, weight, finish, lead time, shipping and customization capability as `null`. Populate them only from approved records. The page and related links are generated automatically on rebuild. Detail crops must be labelled; do not call an image of a different piece an alternate angle.
+For a visual study, add a record through the `product()` factory in `src/content/catalogue.ts` with a stable unique slug, category, descriptive title, images, form, character and a related `materialStudyId`. Add optimized images to `public/media/` and record their source. The factory deliberately keeps unknown stone, dimensions, weight, finish, lead time, shipping and customization capability as `null`. Populate them only from approved records. The page and related links are generated automatically on rebuild. Detail crops must be labelled; do not call an image of a different piece an alternate angle.
 
 ### Add a marble or material study
 

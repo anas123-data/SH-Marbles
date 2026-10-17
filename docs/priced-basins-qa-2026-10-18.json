@@ -1,0 +1,51 @@
+{
+  "pages": [
+    {
+      "slug": "green-onyx-stone-vessel-sink",
+      "width": 390,
+      "axeViolations": 0
+    },
+    {
+      "slug": "green-onyx-stone-vessel-sink",
+      "width": 1440,
+      "axeViolations": 0
+    },
+    {
+      "slug": "dark-emperador-marble-sink",
+      "width": 390,
+      "axeViolations": 0
+    },
+    {
+      "slug": "dark-emperador-marble-sink",
+      "width": 1440,
+      "axeViolations": 0
+    },
+    {
+      "slug": "luxury-onyx-vessel-sink",
+      "width": 390,
+      "axeViolations": 0
+    },
+    {
+      "slug": "luxury-onyx-vessel-sink",
+      "width": 1440,
+      "axeViolations": 0
+    },
+    {
+      "slug": "ziarat-white-marble-vessel-sink",
+      "width": 390,
+      "axeViolations": 0
+    },
+    {
+      "slug": "ziarat-white-marble-vessel-sink",
+      "width": 1440,
+      "axeViolations": 0
+    }
+  ],
+  "errors": [],
+  "galleryImages": 14,
+  "variantHandoffs": [
+    "dark-emperador-marble-sink",
+    "ziarat-white-marble-vessel-sink"
+  ],
+  "passed": true
+}

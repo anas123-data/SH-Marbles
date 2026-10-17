@@ -1,0 +1,89 @@
+{
+  "note": "Owner-supplied images copied unchanged; next/image handles responsive delivery. Product facts supplied in the same conversation.",
+  "assets": [
+    {
+      "source": "WhatsApp Image 2026-10-18 at 1.44.58 AM.jpeg",
+      "asset": "public/products/green-onyx/bathroom.jpeg",
+      "bytes": 177658,
+      "sha256": "7bf23c84153152265c9752c7e8223a35e9507e331a3afaa822b8eda05f2fd32a"
+    },
+    {
+      "source": "WhatsApp Image 2026-10-18 at 1.44.57 AM (1).jpeg",
+      "asset": "public/products/green-onyx/front.jpeg",
+      "bytes": 161815,
+      "sha256": "dba1fc865a09d52b9b7e0f6cbf051bbaa09c065ebfc42c75ec8b2eea500beec4"
+    },
+    {
+      "source": "WhatsApp Image 2026-10-18 at 1.44.57 AM.jpeg",
+      "asset": "public/products/green-onyx/countertop.jpeg",
+      "bytes": 189924,
+      "sha256": "45c92006b6ac5cae6f47ce3308e0fd5184dd7b87f8e3be6077d19de5fc2ece05"
+    },
+    {
+      "source": "WhatsApp Image 2026-10-18 at 1.44.56 AM.jpeg",
+      "asset": "public/products/green-onyx/detail.jpeg",
+      "bytes": 184449,
+      "sha256": "7505dd26f4b4b28ab9f3fc648bfed9a6676977d3388d11a3d6fc8038308b56cc"
+    },
+    {
+      "source": "WhatsApp Image 2026-10-18 at 1.49.44 AM.jpeg",
+      "asset": "public/products/dark-emperador/bathroom.jpeg",
+      "bytes": 220299,
+      "sha256": "0e71ca05df99c321e0e7af34056734be1d3d8e9a9682f2670a414928d23e0fee"
+    },
+    {
+      "source": "WhatsApp Image 2026-10-18 at 1.49.44 AM (1).jpeg",
+      "asset": "public/products/dark-emperador/front.jpeg",
+      "bytes": 210933,
+      "sha256": "7c5bb0876884cd30b74b8f45f1293c2de09b4b17d6ebe4d314c86db2f69facd4"
+    },
+    {
+      "source": "WhatsApp Image 2026-10-18 at 1.49.43 AM.jpeg",
+      "asset": "public/products/dark-emperador/countertop.jpeg",
+      "bytes": 157762,
+      "sha256": "8d8d953bd591753a87827aefd79bc0a2edd24935433ab00d027dc8836abe7419"
+    },
+    {
+      "source": "WhatsApp Image 2026-10-18 at 1.51.16 AM.jpeg",
+      "asset": "public/products/luxury-onyx/bathroom.jpeg",
+      "bytes": 86602,
+      "sha256": "8731327e9c57ea5508e7b936aa7c4ca3594528cbe6d87a1f1402864b298448a0"
+    },
+    {
+      "source": "WhatsApp Image 2026-10-18 at 1.51.16 AM (1).jpeg",
+      "asset": "public/products/luxury-onyx/interior.jpeg",
+      "bytes": 121886,
+      "sha256": "3c48767ed1c5940f56f7f8c979cb7e12895cca51a80c0f69068de92831f67b38"
+    },
+    {
+      "source": "WhatsApp Image 2026-10-18 at 1.51.15 AM.jpeg",
+      "asset": "public/products/luxury-onyx/overhead.jpeg",
+      "bytes": 75254,
+      "sha256": "eb88a9c8ba3392f9a34803680a047995e743694c776d3114cb3eb7e6e4092977"
+    },
+    {
+      "source": "WhatsApp Image 2026-10-18 at 1.52.52 AM.jpeg",
+      "asset": "public/products/ziarat-white/bathroom.jpeg",
+      "bytes": 195343,
+      "sha256": "581e5ba72d1fe3c8e7f2007999f11dfdc0ab9d11d5afd5ed4baff2098027be6e"
+    },
+    {
+      "source": "WhatsApp Image 2026-10-18 at 1.52.51 AM (1).jpeg",
+      "asset": "public/products/ziarat-white/angle.jpeg",
+      "bytes": 216903,
+      "sha256": "bdb2d6237066d0ea0736123071d4472ee7416f89e48d1870cdd0822daab2a4ca"
+    },
+    {
+      "source": "WhatsApp Image 2026-10-18 at 1.52.51 AM.jpeg",
+      "asset": "public/products/ziarat-white/front.jpeg",
+      "bytes": 168639,
+      "sha256": "0603f14bb5c55daa5cf91ac2833d02c6d31eee3aa7c2af4ea66a53a19b9b63c5"
+    },
+    {
+      "source": "WhatsApp Image 2026-10-18 at 1.52.52 AM (1).jpeg",
+      "asset": "public/products/ziarat-white/styled.jpeg",
+      "bytes": 204731,
+      "sha256": "1092fc9549eab4e92d3a536e7473c2b7127f8e4526d02b55e7037da6a08b3340"
+    }
+  ]
+}

@@ -1,9 +1,53 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {resolveSiteConfig} from '../src/content/site-config.ts';
-import {brandGraph,productGraph,serializeStructuredData} from '../src/content/structured-data.ts';
 import {readFileSync} from 'node:fs';
 import {stripTypeScriptTypes} from 'node:module';
+import {greenOnyxBasin} from '../src/content/green-onyx-basin.ts';
+import {formatDimensions,formatPrice} from '../src/content/product-format.ts';
+import {darkEmperadorBasin} from '../src/content/dark-emperador-basin.ts';
+import {luxuryOnyxBasin} from '../src/content/luxury-onyx-basin.ts';
+import {ziaratWhiteBasin} from '../src/content/ziarat-white-basin.ts';
+
+const formatUrl=`data:text/javascript;base64,${Buffer.from(stripTypeScriptTypes(readFileSync('src/content/product-format.ts','utf8'))).toString('base64')}`;
+const structuredSource=stripTypeScriptTypes(readFileSync('src/content/structured-data.ts','utf8')).replace("from './product-format'",`from '${formatUrl}'`);
+const {brandGraph,productGraph,serializeStructuredData}=await import(`data:text/javascript;base64,${Buffer.from(structuredSource).toString('base64')}`);
+
+test('each Emperador size has its own price and the third onyx product retains its specifications',()=>{
+  const data=productGraph(darkEmperadorBasin,'https://stone.example');
+  assert.deepEqual(data.offers.map(offer=>[offer.name,offer.price,offer.priceCurrency]),[
+    ['16 L × 12 W × 5.5 H inches',38000,'PKR'],['18 L × 14 W × 5.5 H inches',50000,'PKR']
+  ]);
+  assert.equal(formatDimensions(luxuryOnyxBasin.dimensions),'18 L × 14 W × 5 H inches');
+  assert.equal(productGraph(luxuryOnyxBasin,null).offers.price,50000);
+  assert.equal(luxuryOnyxBasin.careInstructions.length,2);
+  for(const product of [darkEmperadorBasin,luxuryOnyxBasin]) {
+    assert.equal(product.images.length,3);
+    assert.equal(product.availability,'unconfirmed');
+  }
+});
+
+test('round Ziarat sizes use diameter, retain the shared height and have the correct prices',()=>{
+  const data=productGraph(ziaratWhiteBasin,'https://stone.example');
+  assert.deepEqual(data.offers.map(offer=>[offer.name,offer.price]),[
+    ['14 inches diameter × 4 inches high',32000],['16 inches diameter × 4 inches high',38000]
+  ]);
+  assert.equal(ziaratWhiteBasin.images.length,4);
+  assert.equal(ziaratWhiteBasin.stone,'Ziarat White Marble');
+});
+
+test('owner-supplied basin price and partial dimensions remain truthful in display and schema',()=>{
+  assert.equal(formatPrice(greenOnyxBasin.price),'PKR 52,000');
+  assert.equal(formatDimensions(greenOnyxBasin.dimensions),'17 L × 13 W inches');
+  const data=productGraph(greenOnyxBasin,'https://stone.example');
+  assert.equal(data['@type'],'Product');
+  assert.equal(data.offers.price,52000);assert.equal(data.offers.priceCurrency,'PKR');
+  assert.equal(data.offers.url,'https://stone.example/products/green-onyx-stone-vessel-sink');
+  assert.equal(data.image.length,4);assert.equal(data.material,'Natural Green Onyx Stone');
+  for(const field of ['availability','shippingDetails','priceValidUntil'])assert.ok(!(field in data.offers));
+  assert.equal(greenOnyxBasin.dimensions.height,undefined);
+  assert.equal(greenOnyxBasin.materialStudyId,null);
+});
 
 test('preview stays noindex; production needs explicit indexing and a valid origin',()=>{
   assert.deepEqual(resolveSiteConfig({}),{origin:null,indexable:false});

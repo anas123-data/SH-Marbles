@@ -16,12 +16,22 @@ export interface Product {
   id: string;
   slug: string;
   title: string;
+  fullTitle?: string;
+  subcategory?: string;
+  price?: { amount: number; currency: 'PKR' };
+  variants?: ProductVariant[];
+  installation?: string;
+  installationNotes?: string;
+  careInstructions?: string[];
+  features?: string[];
+  style?: string;
+  variationNote?: string;
   category: CategoryId;
   collection: CategoryId;
   stone: string | null;
-  materialStudyId: string;
+  materialStudyId: string | null;
   finish: string | null;
-  dimensions: { width: number; depth: number; height: number; unit: 'mm' } | null;
+  dimensions: { width?: number; length?: number; depth?: number; height?: number; diameter?: number; unit: 'mm' | 'in' } | null;
   weightKg: number | null;
   description: string;
   detailStory: string;
@@ -38,6 +48,12 @@ export interface Product {
   availability: 'unconfirmed' | 'on-inquiry' | 'made-to-order';
   contentStatus: 'visual-study' | 'verified';
   seo: SeoRecord;
+}
+
+export interface ProductVariant {
+  id: string;
+  dimensions: NonNullable<Product['dimensions']>;
+  price: NonNullable<Product['price']>;
 }
 
 export interface Collection {

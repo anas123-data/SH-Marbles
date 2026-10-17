@@ -1,4 +1,8 @@
 import type { CatalogueImage, CatalogueRepository, Collection, Material, Product } from './catalogue-models';
+import { greenOnyxBasin } from './green-onyx-basin';
+import { darkEmperadorBasin } from './dark-emperador-basin';
+import { luxuryOnyxBasin } from './luxury-onyx-basin';
+import { ziaratWhiteBasin } from './ziarat-white-basin';
 
 const photograph = (file: string, alt: string, caption = 'Supplied setting', position = '50% 60%'): CatalogueImage => ({ src: `/media/${file}.webp`, alt, caption, position });
 const detail = (image: CatalogueImage): CatalogueImage => ({ ...image, alt: `Surface detail: ${image.alt}`, caption: 'Detail crop · same supplied image', detail: true });
@@ -13,7 +17,7 @@ const objects = photograph('stone-objects', 'Light stone noughts and crosses on 
 
 export const catalogueCollections: Collection[] = [
   { id: 'tables', title: 'Tables', subtitle: 'An anchor for the everyday.', description: 'Quiet geometry. A surface with its own rhythm. Explore stone tables through form, proportion and the space around them.', introduction: 'A table can hold a room together without asking for attention. Begin with a side-table study, then bring your own proportions to the conversation.', image: table, interest: 'A marble table', seo: { title: 'Marble Tables', description: 'Explore a sculptural marble side-table study and start a brief for a custom table with SH MARBLES.' } },
-  { id: 'basins', title: 'Basins', subtitle: 'A different kind of daily ritual.', description: 'Soft bowls and precise lines. Marble sinks and wash-basin studies that bring material character to a familiar ritual.', introduction: 'A basin is experienced up close. The curve of the bowl, the line of the rim and the pattern beneath the light each deserve a closer look.', image: fluted, interest: 'A marble basin', seo: { title: 'Marble Sinks & Basins', description: 'Explore sculptural marble sinks and wash-basin studies, from fluted forms to rounded vessels, with SH MARBLES.' } },
+  { id: 'basins', title: 'Wash Basins', subtitle: 'A different kind of daily ritual.', description: 'Soft bowls and precise lines. Natural stone wash basins and form studies that bring material character to a familiar ritual.', introduction: 'A basin is experienced up close. The curve of the bowl, the line of the rim and the pattern beneath the light each deserve a closer look.', image: greenOnyxBasin.images[0], interest: 'A marble basin', seo: { title: 'Marble Sinks & Basins', description: 'Explore sculptural marble sinks and wash-basin studies, from fluted forms to rounded vessels, with SH MARBLES.' } },
   { id: 'objects', title: 'Objects', subtitle: 'An invitation to linger.', description: 'Smaller in scale. Just as considered. Stone objects for a quiet pause, a shared moment and a place on the table.', introduction: 'Sometimes the smallest piece changes the way a room feels. Contrasting stone and familiar shapes make a simple game worth leaving in view.', image: objects, interest: 'A stone object', seo: { title: 'Decorative Stone Objects', description: 'Discover a stone game-set study and explore ideas for decorative marble objects with SH MARBLES.' } },
 ];
 
@@ -26,6 +30,10 @@ function product(seed: ProductSeed): Product {
 }
 
 export const products: Product[] = [
+  greenOnyxBasin,
+  darkEmperadorBasin,
+  luxuryOnyxBasin,
+  ziaratWhiteBasin,
   product({ slug: 'cross-base-side-table', title: 'Cross-base side table', category: 'tables', materialStudyId: 'ink-and-ivory', form: 'Square top · intersecting base', character: 'Dark ground · pale, branching veins', description: 'A compact silhouette with a quietly architectural presence. Intersecting planes give expressive stone a clear, composed form.', detailStory: 'The straight edge of the top meets the intersecting base below. In the supplied views, the pale veins bring movement to an otherwise still composition.', images: [table, photograph('table-detail', 'Closer supplied view of the dark cross-base side table', 'Second supplied view'), detail(table)] }),
   product({ slug: 'fluted-rectangular-basin', title: 'Fluted rectangular basin', category: 'basins', materialStudyId: 'burgundy', form: 'Rectangular bowl · fluted exterior', character: 'Deep wine tones · fine pale veins', description: 'A generous outline framed by a rhythm of carved-looking folds. Deep colour gives this basin study its distinct presence.', detailStory: 'Light settles along the vertical rhythm of the outer wall. The curved corners soften the rectangular form, while the visible veining moves freely across it.', images: [fluted, photograph('fluted-basin-kitchen', 'Burgundy fluted rectangular basin in a supplied kitchen setting', 'Second supplied setting'), detail(fluted)] }),
   product({ slug: 'fluted-round-basin', title: 'Fluted round basin', category: 'basins', materialStudyId: 'ink-and-ivory', form: 'Circular bowl · fluted exterior', character: 'Black and white contrast · expressive veins', description: 'A circular form, given another dimension through repetition. Pale lines travel across a dark surface and a finely divided edge.', detailStory: 'The fluted perimeter changes with the light. A smooth-looking interior sets up a contrast with the repeated exterior lines in this supplied image.', images: [round, detail(round)] }),

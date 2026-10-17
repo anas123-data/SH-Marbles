@@ -31,7 +31,7 @@ export interface MaterialReference {
   image:ReferenceImage; palette:string[];
 }
 export interface ProductReference {
-  id:string; slug:string; title:string; category:'tables'|'basins'|'objects'; materialStudyId:string; image:ReferenceImage;
+  id:string; slug:string; title:string; category:'tables'|'basins'|'objects'; materialStudyId:string|null; image:ReferenceImage;
 }
 export interface ReferenceCatalogue { materials: MaterialReference[]; products: ProductReference[] }
 export interface Selection { productIds:string[]; materialIds:string[] }
