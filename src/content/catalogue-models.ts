@@ -26,6 +26,7 @@ export interface Product {
   features?: string[];
   style?: string;
   variationNote?: string;
+  dimensionNotes?: string;
   category: CategoryId;
   collection: CategoryId;
   stone: string | null;

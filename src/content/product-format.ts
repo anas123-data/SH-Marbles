@@ -14,7 +14,7 @@ export function productPriceLabel(product: Pick<Product, 'price' | 'variants'>) 
 
 export function formatDimensions(dimensions: NonNullable<Product['dimensions']>) {
   const unit = dimensions.unit === 'in' ? 'inches' : 'mm';
-  if (dimensions.diameter !== undefined) return `${dimensions.diameter} ${unit} diameter${dimensions.height !== undefined ? ` × ${dimensions.height} ${unit} high` : ''}`;
+  if (dimensions.diameter !== undefined) return `${dimensions.diameter} ${unit} diameter${dimensions.depth !== undefined ? ` × ${dimensions.depth} ${unit} deep` : ''}${dimensions.height !== undefined ? ` × ${dimensions.height} ${unit} high` : ''}`;
   return ([['length', 'L'], ['width', 'W'], ['depth', 'D'], ['height', 'H']] as const)
     .filter(([key]) => dimensions[key] !== undefined)
     .map(([key, label]) => `${dimensions[key]} ${label}`).join(' × ') + ` ${unit}`;

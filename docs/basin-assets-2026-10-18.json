@@ -84,6 +84,168 @@
       "asset": "public/products/ziarat-white/styled.jpeg",
       "bytes": 204731,
       "sha256": "1092fc9549eab4e92d3a536e7473c2b7127f8e4526d02b55e7037da6a08b3340"
+    },
+    {
+      "source": "WhatsApp Image 2026-10-18 at 2.02.26 AM.jpeg",
+      "asset": "public/products/dark-green-onyx/bathroom.jpeg",
+      "bytes": 191045,
+      "sha256": "145063537307990bd27e1b330db56872a953bb5b29a3ccc9bf25f07760422bee"
+    },
+    {
+      "source": "WhatsApp Image 2026-10-18 at 2.02.25 AM.jpeg",
+      "asset": "public/products/dark-green-onyx/front.jpeg",
+      "bytes": 162271,
+      "sha256": "271286d931b406ba33e98249a0adf64d320257b0666b8cbbc9cfc48fe30f488a"
+    },
+    {
+      "source": "WhatsApp Image 2026-10-18 at 2.02.24 AM.jpeg",
+      "asset": "public/products/dark-green-onyx/vanity.jpeg",
+      "bytes": 166772,
+      "sha256": "fde4c9dcdf08d174d6f271e34bc42e6c968ca885fe29cb24667a9bfd9b04489d"
+    },
+    {
+      "source": "WhatsApp Image 2026-10-18 at 2.03.42 AM.jpeg",
+      "asset": "public/products/travertine/bathroom.jpeg",
+      "bytes": 120826,
+      "sha256": "291ef08a7399e5980beea6093b1b97a89325cf89f3d8351af9f5c0700db46ff8"
+    },
+    {
+      "source": "WhatsApp Image 2026-10-18 at 2.03.43 AM.jpeg",
+      "asset": "public/products/travertine/front.jpeg",
+      "bytes": 94133,
+      "sha256": "eff81e7f8a9d736a5ed06c2d8a4ff17fbef386d2fd5e56dceb83df56e43a2517"
+    },
+    {
+      "source": "WhatsApp Image 2026-10-18 at 2.03.41 AM.jpeg",
+      "asset": "public/products/travertine/interior.jpeg",
+      "bytes": 52309,
+      "sha256": "4e6e7ded97039fed107370b72849f69368395d4a5821e9ce5fb22ec34a0d261f"
+    },
+    {
+      "source": "WhatsApp Image 2026-10-18 at 2.04.57 AM.jpeg",
+      "asset": "public/products/green-marble/bathroom.jpeg",
+      "bytes": 95446,
+      "sha256": "eb2a3074d5fc4f598efa616d3b2bedeb9a31ce07dd3e05fbd37dea907cb58c82"
+    },
+    {
+      "source": "WhatsApp Image 2026-10-18 at 2.04.59 AM.jpeg",
+      "asset": "public/products/green-marble/farmhouse.jpeg",
+      "bytes": 127808,
+      "sha256": "d7d49b1854967d6d56fa2196fabe69627073eef1d2d8e4ea77552720c331c869"
+    },
+    {
+      "source": "WhatsApp Image 2026-10-18 at 2.04.56 AM.jpeg",
+      "asset": "public/products/green-marble/interior.jpeg",
+      "bytes": 78971,
+      "sha256": "4b3fb5d9d3bfe6a8b4f5ea2536fae4a0bbea4911637b8a791eaefd596c81c5ea"
+    },
+    {
+      "source": "WhatsApp Image 2026-10-18 at 2.06.18 AM.jpeg",
+      "asset": "public/products/round-travertine/bathroom.jpeg",
+      "bytes": 121656,
+      "sha256": "2f2e6ff0cf12d53e5615226e93c5d573e4fcc066c9692d9a0b0944f9efa55220"
+    },
+    {
+      "source": "WhatsApp Image 2026-10-18 at 2.06.17 AM.jpeg",
+      "asset": "public/products/round-travertine/front.jpeg",
+      "bytes": 134483,
+      "sha256": "631eee69ecdd06b80d616e96431372c40332a39186df2b8ad02dd79120ee63e4"
+    },
+    {
+      "source": "WhatsApp Image 2026-10-18 at 2.06.16 AM.jpeg",
+      "asset": "public/products/round-travertine/countertop.jpeg",
+      "bytes": 165515,
+      "sha256": "dc5231bd1e2fb5fc1255e117b9d087f6f3befc3adc15648557e79999eb2e8a1c"
+    },
+    {
+      "source": "WhatsApp Image 2026-10-18 at 2.08.23 AM.jpeg",
+      "asset": "public/products/green-onyx-19/bathroom.jpeg",
+      "bytes": 294640,
+      "sha256": "0d7092d348754033f00b77e67b863e6525e26b548af804f2f8bb04d2c92596fa"
+    },
+    {
+      "source": "WhatsApp Image 2026-10-18 at 2.08.21 AM (1).jpeg",
+      "asset": "public/products/green-onyx-19/front.jpeg",
+      "bytes": 156513,
+      "sha256": "377515c4ec9ab7802f9990d17e244a2563aa2469bcb159c57e7a30f19f142cb2"
+    },
+    {
+      "source": "WhatsApp Image 2026-10-18 at 2.08.21 AM.jpeg",
+      "asset": "public/products/green-onyx-19/overhead.jpeg",
+      "bytes": 133512,
+      "sha256": "3f9dbafa064681d35f0596da6793bfc0e107f893616eed03e8c44beadc0c151c"
+    },
+    {
+      "source": "WhatsApp Image 2026-10-17 at 11.36.22 PM (1).jpeg",
+      "asset": "public/products/ziarat-white-fluted/bathroom.jpeg",
+      "bytes": 100668,
+      "sha256": "da8ec5b75825324f48e094fd288459b51dc67fe28f02d23615d2e986370a9121"
+    },
+    {
+      "source": "WhatsApp Image 2026-10-17 at 11.36.23 PM.jpeg",
+      "asset": "public/products/ziarat-white-fluted/settings.jpeg",
+      "bytes": 134704,
+      "sha256": "bcadf71f4ec9f8e89477dc42b751fee14de7983379a98e9e02566a6c4d384c2a"
+    },
+    {
+      "source": "WhatsApp Image 2026-10-17 at 11.36.22 PM.jpeg",
+      "asset": "public/products/ziarat-white-fluted/angle.jpeg",
+      "bytes": 104520,
+      "sha256": "6e87846d74ff7e6f3dadf8aae47a0aed0e2da42d50c5038257f142788bb6f105"
+    },
+    {
+      "source": "WhatsApp Image 2026-10-17 at 11.43.26 PM.jpeg",
+      "asset": "public/products/ziyarat-white-fluted/bathroom.jpeg",
+      "bytes": 128584,
+      "sha256": "ee22cbb494fad3a12b1f3f46cf96e616605ff88e26bf3b041bbb559aeca5e229"
+    },
+    {
+      "source": "WhatsApp Image 2026-10-17 at 11.43.26 PM (1).jpeg",
+      "asset": "public/products/ziyarat-white-fluted/interior.jpeg",
+      "bytes": 117210,
+      "sha256": "86fb4363fbe4fb9003cd4ab6e43202ec608fba3ce8e5315670143a77592e7ab2"
+    },
+    {
+      "source": "WhatsApp Image 2026-10-17 at 11.43.25 PM.jpeg",
+      "asset": "public/products/ziyarat-white-fluted/vanity.jpeg",
+      "bytes": 130477,
+      "sha256": "20111df992fe304a5f7bf0f5232453191e0d6e8adf9d892ed5a1ce008b71721c"
+    },
+    {
+      "source": "WhatsApp Image 2026-10-17 at 11.45.42 PM.jpeg",
+      "asset": "public/products/rosso-levanto-square/bathroom.jpeg",
+      "bytes": 165468,
+      "sha256": "da06235323f4d4a5d48b1ec7851c447ff63309a4523f4d775798c9cb8de6b84a"
+    },
+    {
+      "source": "WhatsApp Image 2026-10-17 at 11.45.42 PM (1).jpeg",
+      "asset": "public/products/rosso-levanto-square/classic.jpeg",
+      "bytes": 212916,
+      "sha256": "f0da7340b8006d48734ba15fe1dcd98b0f33880137f7e0cbf1eab58bbf069d83"
+    },
+    {
+      "source": "WhatsApp Image 2026-10-17 at 11.45.41 PM.jpeg",
+      "asset": "public/products/rosso-levanto-square/interior.jpeg",
+      "bytes": 159343,
+      "sha256": "586ed77595c28fbb50626b909195056d765f92eb86d5421cd40c13670080376a"
+    },
+    {
+      "source": "WhatsApp Image 2026-10-17 at 11.49.41 PM (1).jpeg",
+      "asset": "public/products/black-marble/bathroom.jpeg",
+      "bytes": 124461,
+      "sha256": "0cd925e3eb3ae5792e5ef37a3a3862830d25e272c87c147227f932445a141477"
+    },
+    {
+      "source": "WhatsApp Image 2026-10-17 at 11.49.42 PM.jpeg",
+      "asset": "public/products/black-marble/interior.jpeg",
+      "bytes": 168779,
+      "sha256": "50ce98210e392205e159eef48f2784980c7b9bda80a8c1b5ffed5cec534ed5a4"
+    },
+    {
+      "source": "WhatsApp Image 2026-10-17 at 11.49.41 PM.jpeg",
+      "asset": "public/products/black-marble/countertop.jpeg",
+      "bytes": 168894,
+      "sha256": "0e89e79eeadd3f02c0ea33972ea3f29e22019a3a21742ae53f8ad95a67be647a"
     }
   ]
 }

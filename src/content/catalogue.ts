@@ -3,6 +3,15 @@ import { greenOnyxBasin } from './green-onyx-basin';
 import { darkEmperadorBasin } from './dark-emperador-basin';
 import { luxuryOnyxBasin } from './luxury-onyx-basin';
 import { ziaratWhiteBasin } from './ziarat-white-basin';
+import { darkGreenOnyxBasin } from './dark-green-onyx-basin';
+import { travertineBasin } from './travertine-basin';
+import { greenMarbleBasin } from './green-marble-basin';
+import { roundTravertineBasin } from './round-travertine-basin';
+import { greenOnyx19Basin } from './green-onyx-19-basin';
+import { ziaratWhiteFlutedBasin } from './ziarat-white-fluted-basin';
+import { ziyaratWhiteFlutedBasin } from './ziyarat-white-fluted-basin';
+import { rossoLevantoSquareBasin } from './rosso-levanto-square-basin';
+import { blackMarbleBasin } from './black-marble-basin';
 
 const photograph = (file: string, alt: string, caption = 'Supplied setting', position = '50% 60%'): CatalogueImage => ({ src: `/media/${file}.webp`, alt, caption, position });
 const detail = (image: CatalogueImage): CatalogueImage => ({ ...image, alt: `Surface detail: ${image.alt}`, caption: 'Detail crop · same supplied image', detail: true });
@@ -34,6 +43,15 @@ export const products: Product[] = [
   darkEmperadorBasin,
   luxuryOnyxBasin,
   ziaratWhiteBasin,
+  darkGreenOnyxBasin,
+  travertineBasin,
+  greenMarbleBasin,
+  roundTravertineBasin,
+  greenOnyx19Basin,
+  ziaratWhiteFlutedBasin,
+  ziyaratWhiteFlutedBasin,
+  rossoLevantoSquareBasin,
+  blackMarbleBasin,
   product({ slug: 'cross-base-side-table', title: 'Cross-base side table', category: 'tables', materialStudyId: 'ink-and-ivory', form: 'Square top · intersecting base', character: 'Dark ground · pale, branching veins', description: 'A compact silhouette with a quietly architectural presence. Intersecting planes give expressive stone a clear, composed form.', detailStory: 'The straight edge of the top meets the intersecting base below. In the supplied views, the pale veins bring movement to an otherwise still composition.', images: [table, photograph('table-detail', 'Closer supplied view of the dark cross-base side table', 'Second supplied view'), detail(table)] }),
   product({ slug: 'fluted-rectangular-basin', title: 'Fluted rectangular basin', category: 'basins', materialStudyId: 'burgundy', form: 'Rectangular bowl · fluted exterior', character: 'Deep wine tones · fine pale veins', description: 'A generous outline framed by a rhythm of carved-looking folds. Deep colour gives this basin study its distinct presence.', detailStory: 'Light settles along the vertical rhythm of the outer wall. The curved corners soften the rectangular form, while the visible veining moves freely across it.', images: [fluted, photograph('fluted-basin-kitchen', 'Burgundy fluted rectangular basin in a supplied kitchen setting', 'Second supplied setting'), detail(fluted)] }),
   product({ slug: 'fluted-round-basin', title: 'Fluted round basin', category: 'basins', materialStudyId: 'ink-and-ivory', form: 'Circular bowl · fluted exterior', character: 'Black and white contrast · expressive veins', description: 'A circular form, given another dimension through repetition. Pale lines travel across a dark surface and a finely divided edge.', detailStory: 'The fluted perimeter changes with the light. A smooth-looking interior sets up a contrast with the repeated exterior lines in this supplied image.', images: [round, detail(round)] }),

@@ -1,0 +1,106 @@
+{
+  "pages": [
+    {
+      "slug": "dark-green-onyx-vessel-sink",
+      "width": 390,
+      "axeViolations": 0
+    },
+    {
+      "slug": "dark-green-onyx-vessel-sink",
+      "width": 1440,
+      "axeViolations": 0
+    },
+    {
+      "slug": "travertine-stone-vessel-sink",
+      "width": 390,
+      "axeViolations": 0
+    },
+    {
+      "slug": "travertine-stone-vessel-sink",
+      "width": 1440,
+      "axeViolations": 0
+    },
+    {
+      "slug": "green-marble-vessel-sink",
+      "width": 390,
+      "axeViolations": 0
+    },
+    {
+      "slug": "green-marble-vessel-sink",
+      "width": 1440,
+      "axeViolations": 0
+    },
+    {
+      "slug": "round-travertine-vessel-sink",
+      "width": 390,
+      "axeViolations": 0
+    },
+    {
+      "slug": "round-travertine-vessel-sink",
+      "width": 1440,
+      "axeViolations": 0
+    },
+    {
+      "slug": "green-onyx-vessel-sink-19x13",
+      "width": 390,
+      "axeViolations": 0
+    },
+    {
+      "slug": "green-onyx-vessel-sink-19x13",
+      "width": 1440,
+      "axeViolations": 0
+    },
+    {
+      "slug": "ziarat-white-fluted-vessel-sink",
+      "width": 390,
+      "axeViolations": 0
+    },
+    {
+      "slug": "ziarat-white-fluted-vessel-sink",
+      "width": 1440,
+      "axeViolations": 0
+    },
+    {
+      "slug": "ziyarat-white-fluted-vessel-sink",
+      "width": 390,
+      "axeViolations": 0
+    },
+    {
+      "slug": "ziyarat-white-fluted-vessel-sink",
+      "width": 1440,
+      "axeViolations": 0
+    },
+    {
+      "slug": "rosso-levanto-square-marble-sink",
+      "width": 390,
+      "axeViolations": 0
+    },
+    {
+      "slug": "rosso-levanto-square-marble-sink",
+      "width": 1440,
+      "axeViolations": 0
+    },
+    {
+      "slug": "black-marble-vessel-sink",
+      "width": 390,
+      "axeViolations": 0
+    },
+    {
+      "slug": "black-marble-vessel-sink",
+      "width": 1440,
+      "axeViolations": 0
+    }
+  ],
+  "errors": [],
+  "galleryImages": 27,
+  "variantHandoffs": [
+    "dark-green-onyx-vessel-sink",
+    "travertine-stone-vessel-sink",
+    "round-travertine-vessel-sink",
+    "ziarat-white-fluted-vessel-sink",
+    "ziyarat-white-fluted-vessel-sink",
+    "rosso-levanto-square-marble-sink",
+    "black-marble-vessel-sink"
+  ],
+  "passed": true
+}
