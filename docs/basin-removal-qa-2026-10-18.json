@@ -1,0 +1,50 @@
+{
+  "basinCount": 13,
+  "retainedProducts": [
+    "/products/green-onyx-stone-vessel-sink",
+    "/products/dark-emperador-marble-sink",
+    "/products/luxury-onyx-vessel-sink",
+    "/products/ziarat-white-marble-vessel-sink",
+    "/products/dark-green-onyx-vessel-sink",
+    "/products/travertine-stone-vessel-sink",
+    "/products/green-marble-vessel-sink",
+    "/products/round-travertine-vessel-sink",
+    "/products/green-onyx-vessel-sink-19x13",
+    "/products/ziarat-white-fluted-vessel-sink",
+    "/products/ziyarat-white-fluted-vessel-sink",
+    "/products/rosso-levanto-square-marble-sink",
+    "/products/black-marble-vessel-sink"
+  ],
+  "allRetainedPagesStatus": 200,
+  "homepageLink": "/collections/basins",
+  "removedProductsStatus": 404,
+  "removedProducts": [
+    "fluted-rectangular-basin",
+    "fluted-round-basin",
+    "rounded-vessel-basin",
+    "rose-toned-vessel",
+    "amber-toned-vessel",
+    "carved-green-basin"
+  ],
+  "browserChecks": {
+    "pages": [
+      {
+        "slug": "black-marble-vessel-sink",
+        "width": 390,
+        "axeViolations": 0
+      },
+      {
+        "slug": "black-marble-vessel-sink",
+        "width": 1440,
+        "axeViolations": 0
+      }
+    ],
+    "errors": [],
+    "galleryImages": 3,
+    "variantHandoffs": [
+      "black-marble-vessel-sink"
+    ],
+    "passed": true
+  },
+  "productionBuild": "passed"
+}

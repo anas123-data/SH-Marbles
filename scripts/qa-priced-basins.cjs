@@ -81,7 +81,7 @@ async function main(){
       }
     }
     await page.goto('http://127.0.0.1:3000/collections/basins',{waitUntil:'networkidle'});
-    assert.equal(await page.locator('.product-card').count(),cases.length+6);
+    assert.equal(await page.locator('.product-card').count(),cases.length);
     for(const item of selectedCases){
       await page.getByRole('searchbox',{name:'Find a piece'}).fill(item.title);
       const matchingCard=page.locator(`.product-card:has(a[href="/products/${item.slug}"])`);
@@ -90,7 +90,11 @@ async function main(){
     }
     await page.goto('http://127.0.0.1:3000/products/luxury-onyx-vessel-sink');
     assert.ok((await page.locator('main').innerText()).includes('Avoid harsh chemicals to maintain shine.'));
-    await page.goto('http://127.0.0.1:3000/products/fluted-round-basin');
+    for(const slug of ['fluted-rectangular-basin','fluted-round-basin','rounded-vessel-basin','rose-toned-vessel','amber-toned-vessel','carved-green-basin']){
+      const response=await page.goto(`http://127.0.0.1:3000/products/${slug}`);
+      assert.equal(response.status(),404);
+    }
+    await page.goto('http://127.0.0.1:3000/products/cross-base-side-table');
     assert.equal(await page.locator('.product-price').count(),0);
     assert.match(await page.locator('.product-introduction').innerText(),/form study/i);
     assert.deepEqual(report.errors,[]);

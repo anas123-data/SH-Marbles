@@ -29,14 +29,14 @@ async function main(){
       for(const link of links)if(link&&!link.includes('.')&&!link.startsWith('/api/')&&!seen.has(link))queue.push(link);
       report.routes.push({route,status:response.status(),title,canonical,noindex:robots.includes('noindex')});
     }
-    for(const route of ['/','/products/fluted-round-basin','/stone-library','/trade','/concierge','/bespoke/configure']){
+    for(const route of ['/','/products/black-marble-vessel-sink','/stone-library','/trade','/concierge','/bespoke/configure']){
       for(const width of [390,1440]){
         await page.setViewportSize({width,height:900});await page.goto(base+route,{waitUntil:'networkidle'});
         assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth));
         const audit=await new AxeBuilder({page}).withTags(['wcag2a','wcag2aa','wcag21aa','wcag22aa']).analyze();const violations=audit.violations.map(item=>({id:item.id,nodes:item.nodes.map(node=>node.target)}));report.accessibility.push({route,width,violations});assert.equal(violations.length,0,JSON.stringify(violations));
       }
     }
-    await page.goto(base+'/products/fluted-round-basin');assert.equal(await page.locator('.image-dialog img').count(),0);await page.getByRole('button',{name:/View full image/}).click();await page.locator('.image-dialog img').waitFor();await page.waitForFunction(()=>document.querySelector('.image-dialog img')?.naturalWidth>0);await page.keyboard.press('Escape');assert.equal(await page.locator('.image-dialog img').count(),0);
+    await page.goto(base+'/products/black-marble-vessel-sink');assert.equal(await page.locator('.image-dialog img').count(),0);await page.getByRole('button',{name:/View full image/}).click();await page.locator('.image-dialog img').waitFor();await page.waitForFunction(()=>document.querySelector('.image-dialog img')?.naturalWidth>0);await page.keyboard.press('Escape');assert.equal(await page.locator('.image-dialog img').count(),0);
     const robots=await (await context.request.get(base+'/robots.txt')).text(),map=await (await context.request.get(base+'/sitemap.xml')).text();
     if(indexable){assert.match(robots,/Sitemap:/);for(const route of report.routes.filter(item=>!['/bespoke/inquiry','/bespoke/configure','/concierge'].includes(item.route)))assert.ok(map.includes(`<loc>${origin+route.route}</loc>`),route.route);}else{assert.match(robots,/Disallow: \//);assert.ok(!map.includes('<loc>'));}
     const card=await context.request.get(base+'/social/sh-marbles.png');assert.equal(card.status(),200);assert.match(card.headers()['content-type'],/image\/png/);const buffer=await card.body();assert.equal(buffer.readUInt32BE(16),1200);assert.equal(buffer.readUInt32BE(20),630);fs.mkdirSync('output/phase-11',{recursive:true});fs.writeFileSync('output/phase-11/social-card.png',buffer);
